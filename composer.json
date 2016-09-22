@@ -1,0 +1,9 @@
+{
+    "name": "mro/eco",
+    "type": "wordpress-theme",
+    "minimum-stability": "dev",
+    "version": "1.0.0",
+    "require": {
+        "aaronholbrook/autoload": "^1.2"
+    }
+}
