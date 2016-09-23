@@ -1,4 +1,9 @@
-#secondary h1 {
-	font-size: 1.5rem;
-	font-weight: 700;
+#secondary {
+	background-color: $light-gray;
+	// padding: map-get($grid-column-gutter, medium);
+
+	h1 {
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
 }

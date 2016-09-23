@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-<div class="expanded row">
+<div class="expanded small-collapse row">
 
 	<div class="medium-8 medium-push-4 large-9 large-push-3 xxlarge-10 xxlarge-push-2 columns">
 

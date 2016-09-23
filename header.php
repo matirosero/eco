@@ -49,7 +49,7 @@
     <div class="off-canvas-content" data-off-canvas-content>
 
 			<header id="masthead" class="" role="banner">
-				<section class="row column">
+				<section class="expanded row column">
 					<h1 class="site-title">
 						<a href="<?php esc_attr_e( home_url( '/' ) ); ?>" rel="home">
 							<?php bloginfo( 'name' ); ?>
