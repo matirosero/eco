@@ -17,10 +17,12 @@
 				<div class="column row">
 
 					<p class="text-center">
-						<svg class="icon">
+						<!-- <svg class="icon">
 							<use xlink:href="#icon-coffee-cup"></use>
-						</svg>
-						Thanks for using Eco!
+						</svg> -->
+						&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>, todos los derechos reservados
+						<br />
+						Desarrollo web: <a href="http://matilderosero.com">Matilde Rosero</a>
 					</p>
 
 				</div><!-- .column.row -->
