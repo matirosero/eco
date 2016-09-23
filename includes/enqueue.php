@@ -14,6 +14,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		ECO_VERSION,
 		''
 	);
+
 } );
 
 /**
@@ -38,6 +39,8 @@ add_action( 'wp_enqueue_scripts', function() {
 		ECO_VERSION,
 		true
 	);
+
+	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/7584c7752e.js', array(), '4.6.3', false );
 
 	// Add comment script on single posts with comments
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
