@@ -19,7 +19,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	// font-family: 'PT Serif', serif;
 	// font-family: 'Reenie Beanie', cursive;
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i|Reenie+Beanie&subset=latin-ext', false ); 
-	}
+	
 
 } );
 
