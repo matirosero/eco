@@ -23,6 +23,34 @@
 
 <?php echo file_get_contents( get_template_directory() . '/assets/dist/sprite/sprite.svg' ); ?>
 
+<!-- TOPBAR -->
+<div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title"><?php bloginfo( 'name' ); ?></div>
+</div>
+
+<div class="top-bar" id="main-menu">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text"><?php bloginfo( 'name' ); ?></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
+      <li class="has-submenu">
+        <a href="#">One</a>
+        <ul class="submenu menu vertical" data-submenu>
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Two</a></li>
+      <li><a href="#">Three</a></li>
+    </ul>
+  </div>
+</div>
+<!-- END TOPBAR -->
 
 <div class="off-canvas-wrapper">
   <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
