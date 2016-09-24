@@ -36,6 +36,35 @@
     </ul>
   </div>
   <div class="top-bar-right">
+<?php 
+wp_nav_menu(array(
+  'container' => false,
+  'menu' => __( 'Topbar menu', 'eco' ),
+  'menu_class' => 'dropdown menu',
+  'theme_location' => 'primary',
+  'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+  //Recommend setting this to false, but if you need a fallback...
+  'fallback_cb' => 'f6_topbar_menu_fallback',
+  'walker' => new F6_TOPBAR_MENU_WALKER(),
+));
+?>
+  </div>
+</div>
+<!-- END TOPBAR -->
+
+<!-- TOPBAR -->
+<div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle></button>
+  <div class="title-bar-title"><?php bloginfo( 'name' ); ?></div>
+</div>
+
+<div class="top-bar" id="main-menu">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text"><?php bloginfo( 'name' ); ?></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
     <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
       <li class="has-submenu">
         <a href="#">One</a>
@@ -87,7 +116,7 @@
 				</section>
 				<nav id="site-navigation" class="top-bar show-for-medium" data-topbar role="navigation">
 					<section class="top-bar-section row column">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+						<?php //wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 					</section>
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
