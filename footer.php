@@ -22,7 +22,7 @@
 						</svg> -->
 						&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>, todos los derechos reservados
 						<br />
-						Desarrollo web: <a href="http://matilderosero.com">Matilde Rosero</a> :D
+						Desarrollo web: <a href="http://matilderosero.com">Matilde Rosero</a> >:
 					</p>
 
 				</div><!-- .column.row -->
