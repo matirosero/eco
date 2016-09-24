@@ -36,18 +36,19 @@
     </ul>
   </div>
   <div class="top-bar-right">
-<?php 
-wp_nav_menu(array(
-  'container' => false,
-  'menu' => __( 'Topbar menu', 'eco' ),
-  'menu_class' => 'dropdown menu',
-  'theme_location' => 'primary',
-  'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
-  //Recommend setting this to false, but if you need a fallback...
-  'fallback_cb' => 'f6_topbar_menu_fallback',
-  'walker' => new F6_TOPBAR_MENU_WALKER(),
-));
-?>
+    <?php 
+    wp_nav_menu(
+      array(
+      'container' => false,
+      'menu' => __( 'Topbar menu', 'eco' ),
+      'menu_class' => 'menu',
+      'theme_location' => 'primary',
+      'items_wrap'      => '<ul id="%1$s" class="%2$s" data-responsive-menu="drilldown medium-dropdown">%3$s</ul>',
+      //Recommend setting this to false, but if you need a fallback...
+      // 'fallback_cb' => false,
+      'walker' => new F6_TOPBAR_MENU_WALKER(),
+    ));
+    ?>
   </div>
 </div>
 <!-- END TOPBAR -->
@@ -94,13 +95,13 @@ wp_nav_menu(array(
 				<span aria-hidden="true">&times;</span>
 			</button>
 			<?php
-			 $args = array (
-				 'theme_location' 	=> 'primary',
-				 'container' 				=> 'nav',
-				 'container_class'	=> 'offcanvas-navigation',
-				 'menu_class' 			=> 'mobile-menu',
-			 );
-				wp_nav_menu( $args );
+			 // $args = array (
+				//  'theme_location' 	=> 'primary',
+				//  'container' 				=> 'nav',
+				//  'container_class'	=> 'offcanvas-navigation',
+				//  'menu_class' 			=> 'mobile-menu',
+			 // );
+				// wp_nav_menu( $args );
 			?>
     </div><!-- #offCanvasLeft -->
     <div class="off-canvas-content" data-off-canvas-content>
