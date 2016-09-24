@@ -36,21 +36,11 @@
     </ul>
   </div>
   <div class="top-bar-right">
-    <ul class="menu" data-responsive-menu="drilldown medium-dropdown">
-      <li class="has-submenu">
-        <a href="#">One</a>
-        <ul class="submenu menu vertical" data-submenu>
-          <li><a href="#">One</a></li>
-          <li><a href="#">Two</a></li>
-          <li><a href="#">Three</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Two</a></li>
-      <li><a href="#">Three</a></li>
-    </ul>
+    <?php eco_top_nav(); ?>
   </div>
 </div>
 <!-- END TOPBAR -->
+
 
 <div class="off-canvas-wrapper">
   <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
