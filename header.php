@@ -38,18 +38,14 @@
     </div>
 
     <nav id="main-menu" class="top-bar">
-      <section class="top-bar-left">
+      <section class="top-bar-left hide-for-small-only">
         <ul class="dropdown menu" data-dropdown-menu>
-          <!-- <h1 class="site-title"> -->
-          <li>            
-            <a href="<?php esc_attr_e( home_url( '/' ) ); ?>" rel="home">
-              <h1 class="site-title">
-                <svg class="icon">
-                  <use xlink:href="#logo-eco-topbar"></use>
-                </svg>
+          <li>
+            <h1 class="site-title">
+              <a href="<?php esc_attr_e( home_url( '/' ) ); ?>" rel="home">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/svg/logo-eco-topbar.svg" alt="<?php bloginfo( 'name' ); ?>" />
-              </h1>
-            </a>
+              </a>
+            </h1>
           </li>
         </ul>
       </section>

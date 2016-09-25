@@ -1,13 +1,44 @@
+$menu-link-color: $body-font-color;
+
 #main-menu {
 	.top-bar-left {
 		.menu > li > a {
 		    // display: inline-block;
+		    
 		    padding: 0rem 1rem;
 		    // line-height: 1;
-		}	
+		}
 		h1 {
 			margin:0;
-		}		
+		}
+	}
+
+	.top-bar-right {
+		padding-top: rem-calc(23px);
+		a {
+			color: $menu-link-color;
+			font-family: $header-font-family;
+			font-weight: bold;
+			text-transform: uppercase;
+			&:after {
+				border-color: $menu-link-color transparent transparent;
+			}
+			&:hover {
+				color: $orange;
+				&:after {
+					border-color: $orange transparent transparent;
+				}
+			}
+		}
+		.active > a {
+			color: $white;
+			&:after {
+				border-color: $white transparent transparent;
+			}
+		}
+
 	}
 
 }
+
+
