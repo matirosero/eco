@@ -1,5 +1,12 @@
 #colophon {
-	background: #eee;
+	background: $green;
 	padding: 3rem 0;
 	color: transparentize(#000, .7);
+
+	a {
+		color: $white;
+		&:hover {
+			color: transparentize($white, .3);
+		} 
+	}
 }
