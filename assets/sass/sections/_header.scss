@@ -1,9 +1,11 @@
 #masthead {
+	border-bottom: 1px solid $light-gray;
 	margin-bottom: 1.25rem;
 }
 
 .site-title {
 	font-size: 3rem;
+	margin:0;
 }
 
 .site-description {

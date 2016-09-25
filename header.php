@@ -29,17 +29,28 @@
     <!-- TOPBAR -->
     <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle></button>
-      <div class="title-bar-title"><?php bloginfo( 'name' ); ?></div>
+      <div class="title-bar-title">
+        <svg class="icon">
+          <use xlink:href="#logo-eco-topbar"></use>
+        </svg>
+        <?php bloginfo( 'name' ); ?>
+      </div>
     </div>
 
     <nav id="main-menu" class="top-bar">
       <section class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
           <!-- <h1 class="site-title"> -->
-          <li class="menu-text">            
+          <li>            
             <a href="<?php esc_attr_e( home_url( '/' ) ); ?>" rel="home">
-              <?php bloginfo( 'name' ); ?>
-            </a></li>
+              <h1 class="site-title">
+                <svg class="icon">
+                  <use xlink:href="#logo-eco-topbar"></use>
+                </svg>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/svg/logo-eco-topbar.svg" alt="<?php bloginfo( 'name' ); ?>" />
+              </h1>
+            </a>
+          </li>
         </ul>
       </section>
       <section class="top-bar-right">

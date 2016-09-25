@@ -105,7 +105,10 @@ gulp.task('styles', function() {
 	gulp.src(paths.sassPath + '**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass({
-			outputStyle: 'compressed'
+			sourceComments: 'map',
+			sourceMap: 'sass',
+			outputStyle: 'nested'
+			// outputStyle: 'compressed'
 		})
 		.on('error', notify.onError(function(error) {
 			return "Error: " + error.message;
