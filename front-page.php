@@ -44,12 +44,6 @@ get_header(); ?>
 
 	</div><!-- .columns -->
 
-	<div class="medium-4 columns">
-
-		<?php get_sidebar(); ?>
-
-	</div><!-- .columns -->
-
 </div><!-- .row -->
 
 <?php get_footer(); ?>

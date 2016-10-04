@@ -61,4 +61,4 @@
 
 
 
-			<div id="content" class="site-content">
+			<div id="content" class="site-content<?php if ( has_post_thumbnail() ) { echo ' has-hero'; } ?>">
