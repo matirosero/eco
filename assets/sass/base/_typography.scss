@@ -20,7 +20,20 @@ h2 {
 	// font-weight: 700;
 }
 
-.entry-title {
+.page-title {
+	text-align: center;
+	.entry-header &,
+	.page-header & {
+		margin: 1rem 0 2rem;
+	}
+	
+
+	em {
+		font-style: normal;
+		font-family: 'Reenie Beanie';
+		text-transform: none;
+	}
+
 	@include breakpoint(medium) {
 		font-size: 2.5rem;
 	}

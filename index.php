@@ -24,7 +24,7 @@ get_header(); ?>
 
 
 				<?php if ( is_home() && ! is_front_page() ) : ?>
-					<header>
+					<header class="page-header">
 						<h1 class="page-title"><em>Blog</em> ECO</h1>
 					</header>
 				<?php endif; ?>

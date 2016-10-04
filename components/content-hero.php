@@ -11,7 +11,7 @@ if ( has_post_thumbnail( $post->ID ) ) :
 			<!-- <div class="row"> -->
 				<!-- <div class="medium-5 medium-offset-1 columns"> -->
 					<div class="hero-text">
-						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+						<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 					</div>
 				<!-- </div> --><!-- .columns -->
 			<!-- </div> --><!-- .row -->
