@@ -81,17 +81,17 @@ function my_wp_nav_menu_items( $items, $args, $ajax = false ) {
 	        foreach ( $active_sites as $active_site ) {
 
 	            /* setup the class */
-		        $class = 'menu-item ' . $active_site . '-link';
+		        $class = 'menu-item menu-item-social menu-item-' . $active_site;
 
 	            if ( $active_site == 'email' ) {
 	                $items .= '<li class="'.esc_attr( $class ).'">
 	                    <a target="_blank" href="mailto:' . antispambot( is_email( get_theme_mod( $active_site ) ) ) . '">
-	                        <span>'.ucfirst($active_site).'</span></a>
+	                        <i class="fa fa-lg fa-envelope"></i> <span>'.ucfirst($active_site).'</span></a>
 	                </li>';
 	            } else {
 	                $items .= '<li class="'.esc_attr( $class ).'">
-	                    <a class="'.$active_site.'" target="_blank" href="'.esc_url( get_theme_mod( $active_site) ).'">
-	                        <span>'.ucfirst($active_site).'</span></a>
+	                    <a target="_blank" href="'.esc_url( get_theme_mod( $active_site) ).'">
+	                        <i class="fa fa-lg fa-'.$active_site.'"></i> <span>'.ucfirst($active_site).'</span></a>
 	                </li>';
 	            }
 	        }

@@ -1,0 +1,25 @@
+// a {
+//   .facebook-link &,
+//   .youtube-link &,
+//   .menu-item-type-cart & {
+
+//     &:before {
+//       font-family: FontAwesome;
+//       font-style: normal;
+//       font-size: 1.25rem;
+//       font-weight: normal;
+//       text-decoration: inherit;
+//       margin-right: rem-calc(8);
+//     }
+//   }
+
+//   .facebook-link &,
+//   .youtube-link & {
+//     span {
+//       @include hide-for(medium);
+//     }
+//   }
+
+
+
+// }

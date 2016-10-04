@@ -60,3 +60,8 @@ $menu-link-color: $body-font-color;
 }
 
 
+.menu-item-social {
+	span {
+		@include hide-for(medium);
+	}
+}

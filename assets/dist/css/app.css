@@ -4941,6 +4941,11 @@ input[type="button"] {
       #main-menu .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a:after {
         right: 11px; } }
 
+@media screen and (min-width: 40em) {
+  /* line 64, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_topbar.scss */
+  .menu-item-social span {
+    display: none !important; } }
+
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_offcanvas.scss */
 .mobile-menu {
   list-style: none;
