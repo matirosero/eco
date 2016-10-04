@@ -1,20 +1,56 @@
-@include breakpoint(small) {
-	#featured-hero {
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		margin: 0;
-		position: relative;
-		height: rem-calc(200);
-		}
+#featured-hero {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 0;
+	position: relative;
+	height: rem-calc(200);
 
-		.no-featured-image-set {
-			height: rem-calc(16) !important;
-		}
-}
+	// .no-featured-image-set {
+	// 	height: rem-calc(16) !important;
+	// }
 
-@include breakpoint(medium) {
-	#featured-hero {
+	// > .columns {
+		// position: relative;
+
+	.hero-text {
+		width: 100%;
+		
+		overflow: auto;
+		margin: auto;
+		position: absolute;
+		 
+		left: 0;
+		bottom: 0; 
+		// right: 0;
+		text-align: center;
+		padding: 0 map-get($grid-column-gutter, small);
+
+		border: 1px solid red;
+	}
+
+	// }
+
+	@include breakpoint(medium) {
 		height: rem-calc(400);
+
+		.hero-text {
+			width: 40%;
+			height: 50%;
+			top: 0;
+			left: map-get($grid-column-gutter, medium);
+			padding:  0;
 		}
+	}
+
+	@include breakpoint(large) {
+		height: rem-calc(570);
+
+		.hero-text {
+			left: map-get($grid-column-gutter, large);
+		}
+	}
 }
+
+
+
