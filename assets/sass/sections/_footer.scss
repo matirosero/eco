@@ -9,4 +9,26 @@
 			color: transparentize($white, .3);
 		} 
 	}
+
+	.social-media-icons {
+	  list-style: none;
+	  margin-left: 0;
+	  text-align: center;
+	  li {
+	    display: inline-block;
+	    padding: 0 1rem;
+	  }
+	  .social-icon-link {
+	    display: block;
+	    background-color: $white;
+	    color: $orange;
+		border-radius: 50%;
+		font-size: rem-calc(24px);
+		height: rem-calc(44px);
+		width: rem-calc(44px);
+		line-height: rem-calc(44px);
+		text-align: center;
+
+	  }
+	}
 }

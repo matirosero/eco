@@ -79,7 +79,7 @@ function my_social_media_icons() {
     /* for each active social site, add it as a list item */
     if ( ! empty( $active_sites ) ) {
 
-        // echo "<ul class='social-media-icons'>";
+        echo "<ul class='social-media-icons'>";
 
         foreach ( $active_sites as $active_site ) {
 
@@ -95,13 +95,13 @@ function my_social_media_icons() {
                 </li>
             <?php } else { ?>
                 <li>
-                    <a class="<?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site) ); ?>">
+                    <a class="social-icon-link <?php echo $active_site; ?>" target="_blank" href="<?php echo esc_url( get_theme_mod( $active_site) ); ?>">
                         <i class="<?php echo esc_attr( $class ); ?>" title="<?php printf( __('%s icon', 'text-domain'), $active_site ); ?>"></i>
                     </a>
                 </li>
             <?php
             }
         }
-        // echo "</ul>";
+        echo "</ul>";
     }
 }

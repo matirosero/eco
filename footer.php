@@ -16,6 +16,10 @@
 
 				<div class="column row">
 
+					<nav class="footer-social-menu">
+					 	<?php my_social_media_icons(); ?>
+					</nav>
+
 					<p class="text-center">
 						<!-- <svg class="icon">
 							<use xlink:href="#icon-coffee-cup"></use>
