@@ -16,7 +16,7 @@
 	  text-align: center;
 	  li {
 	    display: inline-block;
-	    padding: 0 1rem;
+	    padding: 0 .5rem;
 	  }
 	  .social-icon-link {
 	    display: block;
@@ -28,6 +28,11 @@
 		width: rem-calc(44px);
 		line-height: rem-calc(44px);
 		text-align: center;
+
+		&:hover {
+			color: $white;
+			background-color: $orange;
+		}
 
 	  }
 	}

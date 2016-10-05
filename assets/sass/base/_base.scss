@@ -1,3 +1,10 @@
+a {
+    transition-duration:0.4s;
+    -moz-transition-duration:0.4s;
+    -webkit-transition-duration:0.4s;
+    -o-transition-duration:0.4s;	
+}
+
 @import "mixins";
 @import "colors";
 @import "grid";
