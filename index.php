@@ -13,11 +13,11 @@
 
 get_header(); ?>
 
-<div class="expanded small-collapse row">
+<div class="expanded small-collapse row" data-equalizer data-equalize-on="medium" >
 
 	<div class="medium-8 large-9 xxlarge-10 columns">
 
-		<div id="primary" class="content-area row">
+		<div id="primary" class="content-area row"  data-equalizer-watch> 
 			<main id="main" class="site-main large-9 large-centered xxlarge-7 columns" role="main">
 
 			<?php if ( have_posts() ) : ?>
@@ -55,7 +55,7 @@ get_header(); ?>
 
 	</div><!-- .columns  -->
 
-	<div class="medium-4 large-3 xxlarge-2 columns">
+	<div class="medium-4 large-3 xxlarge-2 columns full-height">
 
 		<?php get_sidebar(); ?>
 

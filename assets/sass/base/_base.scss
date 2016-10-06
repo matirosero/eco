@@ -5,6 +5,10 @@ a {
     -o-transition-duration:0.4s;	
 }
 
+.full-height {
+	min-height: 100vh;
+}
+
 @import "mixins";
 @import "colors";
 @import "grid";

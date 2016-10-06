@@ -41,7 +41,7 @@ get_header(); ?>
 
 	</div><!-- .columns -->
 
-	<div class="medium-4 large-3 xxlarge-2 columns">
+	<div class="medium-4 large-3 xxlarge-2 columns full-height">
 
 		<?php get_sidebar(); ?>
 
