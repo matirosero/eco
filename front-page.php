@@ -11,40 +11,32 @@ get_header(); ?>
 
 <?php get_template_part( 'components/content', 'hero' ); ?>
 
-<div class="row">
+<div class="row column">
 
-	<div class="medium-8 columns">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
+		<div class="row home-section">
+			<div class="medium-7 columns">
+				<h2>Lo que hacemos</h2>
+				<?php the_field('home_what_we_do'); ?>
+			</div><!-- .columns -->
+		</div><!-- .row .home-section -->
 
-			<?php if ( have_posts() ) : ?>
+		<div class="row home-section">
+			<div class="medium-5 columns">
+				<h2>Misión</h2>
+				<?php the_field('home_mission'); ?>
+			</div><!-- .columns -->
+		</div><!-- .row .home-section -->
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+		<div class="row home-section">
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'components/content', get_post_format() );
-					?>
+		</div><!-- .row .home-section -->
+			FREE DOWNLOAD THINGY HERE
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
-				<?php endwhile; ?>
-
-				<?php the_posts_navigation(); ?>
-
-			<?php else : ?>
-
-				<?php get_template_part( 'components/content', 'none' ); ?>
-
-			<?php endif; ?>
-
-			</main><!-- #main -->
-		</div><!-- #primary -->
-
-	</div><!-- .columns -->
 
 </div><!-- .row -->
 

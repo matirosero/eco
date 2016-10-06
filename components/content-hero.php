@@ -11,7 +11,6 @@ if ( has_post_thumbnail( $post->ID ) ) :
 
 			<div class="hero-text">
 				<h1 class="page-title"><?php the_field( 'page_subtitle' ); ?></h1>
-				<p><?php the_field( 'home_hero_form_text'); ?></p>
 				<?php
 				if( function_exists( 'mc4wp_show_form' ) ) {
 				    echo '<p>'.get_field( 'home_hero_form_text').'</p>';
