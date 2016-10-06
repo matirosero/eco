@@ -9,6 +9,8 @@
 
 get_header(); ?>
 
+<?php get_template_part( 'components/content', 'hero' ); ?>
+
 <div class="row">
 
 	<div class="medium-8 columns">
