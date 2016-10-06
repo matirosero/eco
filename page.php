@@ -16,11 +16,11 @@ get_header(); ?>
 
 <?php get_template_part( 'components/content', 'hero' ); ?>
 
-<div class="expanded small-collapse row">
+<div class="expanded small-collapse row" data-equalizer data-equalize-on="medium" >
 
 	<div class="medium-8 large-9 xxlarge-10 columns">
 
-		<div id="primary" class="content-area row">
+		<div id="primary" class="content-area row" data-equalizer-watch >
 			<main id="main" class="site-main large-9 large-centered xxlarge-7 columns" role="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
