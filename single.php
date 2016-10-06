@@ -9,12 +9,12 @@
 
 get_header(); ?>
 
-<div class="row">
+<div class="expanded small-collapse row" data-equalizer data-equalize-on="medium" >
 
-	<div class="medium-8 columns">
+	<div class="medium-8 large-9 xxlarge-10 columns">
 
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
+		<div id="primary" class="content-area row" data-equalizer-watch > 
+			<main id="main" class="site-main large-9 large-centered xxlarge-7 columns" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -34,9 +34,9 @@ get_header(); ?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 
-	</div><!-- .columns -->
+	</div><!-- .columns  -->
 
-	<div class="medium-4 columns">
+	<div class="medium-4 large-3 xxlarge-2 columns full-height">
 
 		<?php get_sidebar(); ?>
 
