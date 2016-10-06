@@ -5129,7 +5129,7 @@ a.ofc-home {
   margin-bottom: 1.25rem; }
 
 /* line 17, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
-.updated {
+.published + .updated {
   display: none; }
 
 /* line 21, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */

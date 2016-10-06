@@ -5,6 +5,15 @@
  * Eventually, some of the functionality here could be replaced by core features.
  */
 
+
+// if ( ! function_exists( 'foundationpress_entry_meta' ) ) :
+// 	function foundationpress_entry_meta() {
+// 		echo '<div class="entry-meta">';
+// 		echo '<time class="updated" datetime="' . get_the_time( 'c' ) . '">' . the_time('j \d\e\ F \d\e\ Y \|\ g:i a ') . '</time>';
+// 		echo '<p class="byline author">' . __( 'Written by', 'foundationpress' ) . ' <a href="' . get_author_posts_url( get_the_author_meta( 'ID' ) ) . '" rel="author" class="fn">' . get_the_author() . '</a></p>';
+// 		echo '</div>';
+// 	}
+// endif;
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
@@ -21,17 +30,26 @@ function eco_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
+	// Hide category and tag text for pages.
+	if ( 'post' === get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ', ', 'eco' ) ); // WPCS: XSS OK.
+		if ( $categories_list && eco_categorized_blog() ) {
+			$cat_links = sprintf( '<span class="cat-links">' . esc_html__( ' in %1$s', 'eco' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+		}
+	}
+
 	$posted_on = sprintf(
 		esc_html_x( 'Posted on %s', 'post date', 'eco' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>' . $cat_links
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'eco' ),
+		esc_html_x( 'Written by %s', 'post author', 'eco' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 }
 
 /**
@@ -42,10 +60,10 @@ function eco_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'eco' ) ); // WPCS: XSS OK.
-		if ( $categories_list && eco_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'eco' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
+		// $categories_list = get_the_category_list( esc_html__( ', ', 'eco' ) ); // WPCS: XSS OK.
+		// if ( $categories_list && eco_categorized_blog() ) {
+		// 	printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'eco' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+		// }
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'eco' ) );

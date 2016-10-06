@@ -108,3 +108,17 @@ function new_excerpt_more( $more ) {
 	return '... <a class="button read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'foundationpress') . ' <i class="fa fa-arrow-right" aria-hidden="true"></i></a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+
+/**
+ * For debugging https://www.smashingmagazine.com/2011/03/ten-things-every-wordpress-plugin-developer-should-know/ 
+ */
+function log_me($message) {
+    if (WP_DEBUG === true) {
+        if (is_array($message) || is_object($message)) {
+            error_log(print_r($message, true));
+        } else {
+            error_log($message);
+        }
+    }
+}
