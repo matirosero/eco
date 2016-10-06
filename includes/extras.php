@@ -90,8 +90,7 @@ function my_wp_nav_menu_items( $items, $args, $ajax = false ) {
 	                </li>';
 	            } else {
 	                $items .= '<li class="'.esc_attr( $class ).'">
-	                    <a target="_blank" href="'.esc_url( get_theme_mod( $active_site) ).'">
-	                        <i class="fa fa-lg fa-'.$active_site.'"></i> <span>'.ucfirst($active_site).'</span></a>
+	                    <a target="_blank" href="'.esc_url( get_theme_mod( $active_site) ).'"> <i class="fa fa-lg fa-'.$active_site.'"></i> <span>'.ucfirst($active_site).'</span></a>
 	                </li>';
 	            }
 	        }
@@ -101,3 +100,11 @@ function my_wp_nav_menu_items( $items, $args, $ajax = false ) {
 
 	return $items;
 }
+
+/**
+ * Modify Excerpt: change [...] tp Read More 
+ */
+function new_excerpt_more( $more ) {
+	return '... <a class="button read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'foundationpress') . ' <i class="fa fa-arrow-right" aria-hidden="true"></i></a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
