@@ -9,6 +9,8 @@
 
 get_header(); ?>
 
+<?php get_template_part( 'components/content', 'hero' ); ?>
+
 <div class="expanded small-collapse row" data-equalizer data-equalize-on="medium" >
 
 	<div class="medium-8 large-9 xxlarge-10 columns">
