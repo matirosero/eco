@@ -35,15 +35,39 @@ h2 {
 		text-transform: none;
 	}
 
+	#featured-hero & {
+		color: $white;
+		line-height: 1;
+		margin-bottom: 2rem;
+		@include hero-text-shadow;
+
+		.home & {
+			color: $green;
+			text-shadow: none;
+
+			em {
+				color:$body-font-color;
+			}
+		}
+	}
+
 	@include breakpoint(medium) {
 		font-size: 2rem;
+		
+		#featured-hero & {
+
+			.home & {
+				font-size: 2.5rem;
+
+				em {
+					font-size: 5rem;
+				}
+			}
+		}
 	}
 	@include breakpoint(large) {
 		font-size: 3rem;
 	}
 
-	#featured-hero & {
-		color: $white;
-		@include hero-text-shadow;
-	}
+
 }

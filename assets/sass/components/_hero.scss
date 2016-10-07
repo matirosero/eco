@@ -6,6 +6,10 @@
 	position: relative;
 	height: rem-calc(200);
 
+	.home & {
+		min-height: rem-calc(300);
+	}
+
 	// .no-featured-image-set {
 	// 	height: rem-calc(16) !important;
 	// }
@@ -40,6 +44,11 @@
 			top: 0;
 			left: map-get($grid-column-gutter, medium);
 			padding:  0;
+
+			.home & {
+				height: 70%;
+				overflow: visible;
+			}
 		}
 	}
 

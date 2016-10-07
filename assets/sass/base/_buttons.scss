@@ -1,4 +1,8 @@
 input[type="submit"],
 input[type="button"] {
   @include button;
+  font-family: $header-font-family;
+  font-weight:bold;
+  text-transform: uppercase;
+  font-size: rem-calc(16);
 }
