@@ -5032,23 +5032,24 @@ a.ofc-home {
 #colophon {
   background: #05AFA5;
   padding: 3rem 0;
-  color: rgba(0, 0, 0, 0.3); }
-  /* line 6, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_footer.scss */
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 0.86957rem; }
+  /* line 7, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_footer.scss */
   #colophon a {
     color: #fefefe; }
-    /* line 8, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_footer.scss */
+    /* line 9, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_footer.scss */
     #colophon a:hover {
       color: rgba(254, 254, 254, 0.7); }
-  /* line 13, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_footer.scss */
+  /* line 14, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_footer.scss */
   #colophon .social-media-icons {
     list-style: none;
     margin-left: 0;
     text-align: center; }
-    /* line 17, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_footer.scss */
+    /* line 18, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_footer.scss */
     #colophon .social-media-icons li {
       display: inline-block;
       padding: 0 .5rem; }
-    /* line 21, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_footer.scss */
+    /* line 22, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_footer.scss */
     #colophon .social-media-icons .social-icon-link {
       display: block;
       background-color: #fefefe;
@@ -5059,7 +5060,7 @@ a.ofc-home {
       width: 2.3913rem;
       line-height: 2.3913rem;
       text-align: center; }
-      /* line 32, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_footer.scss */
+      /* line 33, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_footer.scss */
       #colophon .social-media-icons .social-icon-link:hover {
         color: #fefefe;
         background-color: #F36E45; }
