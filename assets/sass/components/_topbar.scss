@@ -1,6 +1,7 @@
 $menu-link-color: $body-font-color;
 
 #main-menu {
+	font-size: rem-calc(16);
 	.top-bar-left {
 		.menu > li > h1 > a {
 		    display: block;
