@@ -17,6 +17,9 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<div class="row home-section">
+			<div class="medium-5 columns">
+				<img src="https://placekitten.com/800/600" />
+			</div>
 			<div class="medium-7 columns">
 				<h2>Lo que hacemos</h2>
 				<?php the_field('home_what_we_do'); ?>
@@ -24,10 +27,13 @@ get_header(); ?>
 		</div><!-- .row .home-section -->
 
 		<div class="row home-section">
-			<div class="medium-5 columns">
+			<div class="medium-7 columns">
 				<h2>Misión</h2>
 				<?php the_field('home_mission'); ?>
 			</div><!-- .columns -->
+			<div class="medium-5 columns">
+				<img src="https://placekitten.com/800/600" />
+			</div>
 		</div><!-- .row .home-section -->
 
 		<div class="row home-section">
