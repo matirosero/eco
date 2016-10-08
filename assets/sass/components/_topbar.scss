@@ -32,10 +32,6 @@ $menu-link-color: $body-font-color;
 					border-color: $orange transparent transparent;
 				}
 			}
-
-			@media screen and (min-width: 40em) {
-				line-height: rem-calc(80);
-			}
 		}
 		.active > a {
 			color: $white;
@@ -43,7 +39,12 @@ $menu-link-color: $body-font-color;
 				border-color: $white transparent transparent;
 			}
 		}
-
+		@media screen and (min-width: 40em) {
+			> ul > li > a {
+				line-height: rem-calc(80);
+			}
+			
+		}
 	}
 
 	@media screen and (min-width: 40em) {
