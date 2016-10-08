@@ -1,11 +1,12 @@
 #secondary {
 	background-color: $light-gray;
 	padding: 2rem 0;
-
+	font-size: rem-calc(16px);
 
 	.widget {
 		background: $white;
 		margin: 0 1px 2rem;
+
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -25,7 +26,6 @@
 		form {
 			padding: 0 map-get($grid-column-gutter, small);
 		}
-		// 
 	}
 
 	.widget-title {
@@ -38,4 +38,33 @@
 		text-align: center;
 	}
 
+	.rpwwt-widget {
+		margin: 0 1px 2rem;
+		ul {
+			padding: 0;
+			li {
+				margin: 0;
+				border-bottom: 1px solid $light-gray;
+				height: 75px;
+
+				&:last-child {
+					border-bottom: 0;
+				}
+
+				img {
+					margin: 0 .75rem 0 0;
+				}
+			}
+		}
+
+		a {
+			display: block;
+		}
+
+		.rpwwt-post-title {
+			display: block;
+			padding: .5rem .75rem .5rem 0;
+		}
+	}
 }
+
