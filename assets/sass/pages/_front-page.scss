@@ -1,3 +1,16 @@
 .home-section {
-	padding: 2rem 0;
+	padding: 0 0 1rem;
+
+	@include breakpoint(medium) {
+		padding: 2rem 0;
+	}
+}
+
+.home-section-image {
+	background-size: cover;
+	background-position: top center;
+
+	@include breakpoint(small only) {
+		min-height: rem-calc(200px);
+	}
 }

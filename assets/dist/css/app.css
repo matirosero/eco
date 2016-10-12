@@ -5166,7 +5166,20 @@ a.ofc-home {
 
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_front-page.scss */
 .home-section {
-  padding: 2rem 0; }
+  padding: 0 0 1rem; }
+  @media screen and (min-width: 40em) {
+    /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_front-page.scss */
+    .home-section {
+      padding: 2rem 0; } }
+
+/* line 9, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_front-page.scss */
+.home-section-image {
+  background-size: cover;
+  background-position: top center; }
+  @media screen and (max-width: 39.9375em) {
+    /* line 9, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_front-page.scss */
+    .home-section-image {
+      min-height: 10.86957rem; } }
 
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
 #content {
