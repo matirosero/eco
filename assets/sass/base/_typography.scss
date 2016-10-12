@@ -21,6 +21,10 @@ h2 {
 	// font-weight: 700;
 }
 
+p {
+	margin-bottom: $paragraph-margin-bottom;
+}
+
 .page-title {
 	text-align: center;
 	.entry-header &,
