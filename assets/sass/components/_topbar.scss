@@ -21,8 +21,8 @@ $menu-link-color: $body-font-color;
 			color: $menu-link-color;
 			font-family: $header-font-family;
 			font-weight: bold;
-			
 			text-transform: uppercase;
+			
 			&:after {
 				border-color: $menu-link-color transparent transparent;
 			}
@@ -42,6 +42,7 @@ $menu-link-color: $body-font-color;
 		@media screen and (min-width: 40em) {
 			> ul > li > a {
 				line-height: rem-calc(80);
+				white-space: nowrap;
 			}
 		}
 	}
