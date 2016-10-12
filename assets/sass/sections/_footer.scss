@@ -1,7 +1,7 @@
 #colophon {
 	background: $green;
-	padding: 3rem 0;
-	color: transparentize(#000, .7);
+	padding: 2rem 0;
+	color: transparentize($white, .4);
 	font-size: rem-calc(16);
 
 	a {
@@ -10,31 +10,36 @@
 			color: transparentize($white, .3);
 		} 
 	}
+	p {
+		margin-bottom: 0;
+	}
 
 	.social-media-icons {
-	  list-style: none;
-	  margin-left: 0;
-	  text-align: center;
-	  li {
-	    display: inline-block;
-	    padding: 0 .5rem;
-	  }
-	  .social-icon-link {
-	    display: block;
-	    background-color: $white;
-	    color: $orange;
-		border-radius: 50%;
-		font-size: rem-calc(24px);
-		height: rem-calc(44px);
-		width: rem-calc(44px);
-		line-height: rem-calc(44px);
+		list-style: none;
+		margin-left: 0;
 		text-align: center;
-
-		&:hover {
-			color: $white;
-			background-color: $orange;
+		li {
+			display: inline-block;
+			padding: 0 .5rem;
 		}
+		.social-icon-link {
+			display: block;
+			background-color: $white;
+			color: $orange;
+			border-radius: 50%;
+			font-size: rem-calc(24px);
+			height: rem-calc(44px);
+			width: rem-calc(44px);
+			line-height: rem-calc(44px);
+			text-align: center;
 
-	  }
+			&:hover {
+				color: $white;
+				background-color: $orange;
+			}
+		}
+	}
+	@include breakpoint(medium) {
+		padding: 3rem 0;
 	}
 }
