@@ -11,12 +11,14 @@ if ( has_post_thumbnail( $post->ID ) ) :
 
 			<div class="hero-text">
 				<h1 class="page-title"><?php the_field( 'page_subtitle' ); ?></h1>
-				<?php
-				if( function_exists( 'mc4wp_show_form' ) ) {
-				    echo '<p>'.get_field( 'home_hero_form_text').'</p>';
-				    mc4wp_show_form();
-				}
-				?>
+				<div class="hero-signup hide-for-small-only">
+					<?php
+					if( function_exists( 'mc4wp_show_form' ) ) {
+					    echo '<p>'.get_field( 'home_hero_form_text').'</p>';
+					    mc4wp_show_form();
+					}
+					?>
+				</div>
 			</div>
 
 		<?php elseif ( is_page() ) : ?>

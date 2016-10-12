@@ -7,7 +7,7 @@
 	height: rem-calc(200);
 
 	.home & {
-		min-height: rem-calc(300);
+		min-height: rem-calc(200);
 	}
 
 	// .no-featured-image-set {
@@ -18,14 +18,14 @@
 		// position: relative;
 
 	.hero-text {
-		width: 100%;
-		
+		width: 75%;
+
 		overflow: auto;
 		margin: auto;
 		position: absolute;
-		 
+
 		left: 0;
-		bottom: 0; 
+		bottom: 0;
 		// right: 0;
 		text-align: center;
 		padding: 0 map-get($grid-column-gutter, small);
@@ -36,7 +36,7 @@
 	// }
 
 	@include breakpoint(medium) {
-		height: rem-calc(400);
+		height: rem-calc(450);
 
 		.hero-text {
 			width: 40%;
@@ -44,9 +44,11 @@
 			top: 0;
 			left: map-get($grid-column-gutter, medium);
 			padding:  0;
+			// background:red;
 
 			.home & {
-				height: 60%;
+				height: 65%;
+				width: 49%;
 				overflow: visible;
 			}
 		}
@@ -57,6 +59,12 @@
 
 		.hero-text {
 			left: map-get($grid-column-gutter, large);
+			// background: blue;
+
+			.home & {
+				height: 55%;
+				width: 40%;
+			}
 		}
 	}
 }

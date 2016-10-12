@@ -42,7 +42,7 @@ p {
 	#featured-hero & {
 		color: $white;
 		line-height: 1;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 		@include hero-text-shadow;
 
 		.home & {
@@ -61,6 +61,21 @@ p {
 		#featured-hero & {
 
 			.home & {
+				font-size: 1.75rem;
+
+				em {
+					font-size: 3.5rem;
+				}
+			}
+		}
+	}
+	@include breakpoint(large) {
+		font-size: 3rem;
+		margin-bottom: 2rem;
+
+		#featured-hero & {
+
+			.home & {
 				font-size: 2.5rem;
 
 				em {
@@ -68,9 +83,6 @@ p {
 				}
 			}
 		}
-	}
-	@include breakpoint(large) {
-		font-size: 3rem;
 	}
 
 
