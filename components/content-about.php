@@ -17,6 +17,36 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+
+		<?php
+			/**
+			 * The WordPress Query class.
+			 * @link http://codex.wordpress.org/Function_Reference/WP_Query
+			 *
+			 */
+			$args = array(
+
+				//Type & Status Parameters
+				'post_type'   => 'profile',
+
+				//Order & Orderby Parameters
+				'order'               => 'DESC',
+
+				//Pagination Parameters
+				'posts_per_page'         => -1,
+
+				//Parameters relating to caching
+				'no_found_rows'          => false,
+				'cache_results'          => true,
+				'update_post_term_cache' => true,
+				'update_post_meta_cache' => true,
+
+			);
+
+		$query = new WP_Query( $args );
+
+		?>
+
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'eco' ),
