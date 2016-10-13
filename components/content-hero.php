@@ -26,6 +26,7 @@ if ( has_post_thumbnail( $post->ID ) ) :
 				<!-- <div class="medium-5 medium-offset-1 columns"> -->
 					<div class="hero-text">
 						<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+						<p class="page-subtitle"><?php the_field( 'page_subtitle' ); ?></p>
 					</div>
 				<!-- </div> --><!-- .columns -->
 			<!-- </div> --><!-- .row -->

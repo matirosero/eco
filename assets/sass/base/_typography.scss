@@ -37,6 +37,7 @@ p {
 		font-style: normal;
 		font-family: 'Reenie Beanie';
 		text-transform: none;
+		font-size: 1.25em;
 	}
 
 	#featured-hero & {
@@ -84,6 +85,15 @@ p {
 			}
 		}
 	}
+}
 
-
+.page-subtitle {
+	
+	#featured-hero & {
+		color: $white;
+		@include hero-text-shadow;
+	}
+	@include breakpoint(medium) {
+		font-size: 1.25rem;
+	}
 }
