@@ -25,7 +25,14 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'components/content', 'page' ); ?>
+					<?php 
+
+					if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) :
+						get_template_part( 'components/content', 'about' ); 
+					else:
+						get_template_part( 'components/content', 'page' ); 
+					endif;
+					?>
 
 					<?php
 						// If comments are open or we have at least one comment, load up the comment template.
