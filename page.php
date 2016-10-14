@@ -20,8 +20,14 @@ get_header(); ?>
 
 	<div class="medium-8 large-9 xxlarge-10 columns">
 
-		<div id="primary" class="content-area row" data-equalizer-watch >
-			<main id="main" class="site-main large-9 large-centered xxlarge-7 columns" role="main">
+		<div id="primary" class="content-area row<?php if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) { echo ' collapse'; } ?>" data-equalizer-watch >
+
+			<?php 
+			if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) : ?>
+				<main id="main" class="site-main small-12 columns" role="main">
+			<?php else: ?>
+				<main id="main" class="site-main large-centered large-10 xxlarge-8 columns" role="main">
+			<?php endif; ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 

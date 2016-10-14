@@ -16,9 +16,16 @@
 	<?php endif; ?>
 
 	<div class="entry-content">
-		<?php the_content(); ?>
 
-		<?php
+		<section class="about-main row">
+			<div class="large-centered large-10 xxlarge-8 columns">
+				<?php the_content(); ?>
+			</div>
+		</section>
+
+		<section class="about-profiles row">
+
+			<?php
 			/**
 			 * The WordPress Query class.
 			 * @link http://codex.wordpress.org/Function_Reference/WP_Query
@@ -30,7 +37,7 @@
 				'post_type'   => 'profile',
 
 				//Order & Orderby Parameters
-				'order'               => 'DESC',
+				'order'               => 'ASC',
 
 				//Pagination Parameters
 				'posts_per_page'         => -1,
@@ -43,9 +50,47 @@
 
 			);
 
-		$query = new WP_Query( $args );
+			$query = new WP_Query( $args );
 
+			while ( $query->have_posts() ) : $query->the_post();
+
+				// Count.
+				$i = ! isset( $i ) ? 1 : $i;
+
+				// Does this post count odd?
+				$odd = $i % 2; // 1/0
+				
+				if ($odd) :
+					$image_col_class = 'large-4 xxlarge-3 xxlarge-offset-1';
+					$content_col_class = 'large-7 large-6 xxlarge-6';
+				else:
+					$image_col_class = 'large-4 large-push-8 xxlarge-3 xxlarge-offset-2 xxlarge-push-6';
+					$content_col_class = 'large-7 large-pull-3 xxlarge-6 xxlarge-pull-3';
+				endif;
+				?>
+
+				<div class="profile row">
+					<div class="<?php echo $image_col_class; ?> columns">
+						<div class="profile-image">
+							<?php the_post_thumbnail(); ?>
+						</div>
+					</div>
+					<div class="profile-content <?php echo $content_col_class; ?> columns end">
+						<?php
+						the_title( '<h2 class="profile-title">', '</h2>' );
+						the_content();
+						?>
+					</div>
+				</div>
+
+				<?php
+
+				// Count up.
+				$i++;
+		endwhile;
 		?>
+
+		</section>
 
 		<?php
 			wp_link_pages( array(

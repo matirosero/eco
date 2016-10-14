@@ -25,7 +25,12 @@ if ( has_post_thumbnail( $post->ID ) ) :
 			<!-- <div class="row"> -->
 				<!-- <div class="medium-5 medium-offset-1 columns"> -->
 					<div class="hero-text">
-						<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+						<?php 
+						if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) :
+							echo '<h1 class="page-title"><em>Sobre</em> nosotras</h1>';
+						else:
+							the_title( '<h1 class="page-title">', '</h1>' ); 
+						endif; ?>
 						<p class="page-subtitle"><?php the_field( 'page_subtitle' ); ?></p>
 					</div>
 				<!-- </div> --><!-- .columns -->

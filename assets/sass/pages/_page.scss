@@ -4,7 +4,10 @@
 
 #primary {
 	margin: 0;
-	padding: 2rem 0;
+	padding: 1rem 0;
+	@include breakpoint(medium) {
+		padding: 2rem 0;
+	}
 }
 .entry-header {
 	margin: 0 0 2rem 0;
@@ -31,5 +34,6 @@
 }
 
 .entry-content p {
-	margin-bottom: 1.25rem;
+	margin-bottom: 1rem;
 }
+

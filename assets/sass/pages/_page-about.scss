@@ -1,0 +1,29 @@
+.about-main,
+.profile {
+	@include section-padding;
+}
+
+.profile-image {
+	margin-bottom: 1rem;
+	@include breakpoint(small) {
+		padding-top:60%;
+		position: relative;
+		overflow: hidden;
+		img {
+			position: absolute;
+			top:0;
+		}
+	}
+	@include breakpoint(medium) {
+		padding-top:70%;
+	}
+	@include breakpoint(large) {
+		padding-top:0;
+		overflow: visible;
+		img {
+			position: relative;
+		}
+	}
+	@include breakpoint(xxlarge) {
+	}
+}
