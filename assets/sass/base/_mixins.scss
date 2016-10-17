@@ -4,7 +4,29 @@
 
 @mixin section-padding {
 	padding: 0 0 1rem;
-	@include breakpoint(medium) {
+	@include breakpoint(large) {
 		padding: 2rem 0;
+	}
+}
+
+@mixin block-bottom-padding {
+	padding: 0 0 1rem;
+	@include breakpoint(large) {
+		padding: 0 0 2rem;
+	}
+}
+
+@mixin button-text {
+	font-family: $header-font-family;
+	font-size: $small-font-size;
+	font-weight:bold;
+	text-transform: uppercase;
+}
+
+@mixin type-separator {
+	margin-left: .5rem;
+	&:before {
+		content: '|';
+		margin-right: .5rem;
 	}
 }

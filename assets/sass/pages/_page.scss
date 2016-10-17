@@ -9,12 +9,32 @@
 		padding: 2rem 0;
 	}
 }
+
+.post {
+	.blog & {
+		padding: 0 0 2rem;
+		// border-bottom: 1px dashed $medium-gray;
+		@include breakpoint(large) {
+			padding: 0 0 4rem;
+		}
+	}
+}
+
 .entry-header {
-	margin: 0 0 2rem 0;
+	margin-bottom: 1rem;
 }
 
 .entry-meta {
 	margin-bottom: 1.25rem;
+
+	.byline + .posted-on {
+		display: block;
+
+		@include breakpoint(large) {
+			display: inline;
+			@include type-separator;
+		}
+	}
 }
 
 .published + .updated {
@@ -29,11 +49,22 @@
 }
 
 .vcard .fn {
-	font-weight: normal;
-	font-size: 1rem;
+	// font-weight: normal;
+	// font-size: 1rem;
 }
 
 .entry-content p {
 	margin-bottom: 1rem;
+}
+
+.entry-footer {
+	.tags-links + .comments-link {
+		display: block;
+
+		@include breakpoint(large) {
+			display: inline;
+			@include type-separator;
+		}
+	}
 }
 

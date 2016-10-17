@@ -23,6 +23,35 @@ h2 {
 
 p {
 	margin-bottom: $paragraph-margin-bottom;
+
+	.blog &:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.entry-title {
+	.post-thumbnail + & {
+		margin-top: 1rem;
+	}
+	@include breakpoint(medium) {
+		font-size: rem-calc(28px);
+	}
+	@include breakpoint(large) {
+		font-size: rem-calc(40px);
+		img + & {
+			margin-top: 2rem;
+		}
+	}
+}
+
+.entry-meta,
+.entry-footer {
+	text-transform: uppercase;
+	font-family: $header-font-family;
+	font-size: $small-font-size;
+	a {
+		font-weight: bold;
+	}
 }
 
 .page-title {
