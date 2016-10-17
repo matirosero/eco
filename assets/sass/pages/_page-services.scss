@@ -1,0 +1,57 @@
+.service-list {
+	list-style:none;
+	counter-reset: item;
+	margin-left: 0;
+	li {
+		border-bottom: 1px solid $light-gray;
+		margin-bottom: 2rem;
+		padding-bottom:1rem;
+		
+		position: relative;
+
+		h3 {
+			padding-left: 2rem;
+		}
+
+		&:before {
+			background: $green;
+			color: $white;
+			counter-increment: item;
+			content: counter(item);
+			display: inline-block;
+			font-weight: bold;
+			font-family: $header-font-family;
+			height: 2rem;
+			left: 0;
+			line-height: 2;
+			position: absolute;
+			text-align: center;
+			top: -5px;
+			width: 2rem;
+			@include rounded;
+		}
+
+		@include breakpoint(medium) {
+			padding-left: 2rem;
+
+			h3 {
+				padding-left: 0;
+			}
+
+			&:before {
+				top: .25rem;
+			}
+		}
+
+		@include breakpoint(large) {
+			padding-left: 2.5rem;
+			&:before {
+				font-size: 1.25rem;
+				height: 2.5rem;
+				line-height: 2.5rem;
+				width: 2.5rem;
+			}
+
+		}
+	}
+}

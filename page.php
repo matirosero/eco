@@ -35,6 +35,8 @@ get_header(); ?>
 
 					if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) :
 						get_template_part( 'components/content', 'about' ); 
+					elseif ( is_page('Servicios') ) :
+						get_template_part( 'components/content', 'services' ); 
 					else:
 						get_template_part( 'components/content', 'page' ); 
 					endif;

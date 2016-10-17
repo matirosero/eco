@@ -5355,6 +5355,58 @@ a.ofc-home {
       .profile-image img {
         position: relative; } }
 
+/* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page-services.scss */
+.service-list {
+  list-style: none;
+  counter-reset: item;
+  margin-left: 0; }
+  /* line 5, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page-services.scss */
+  .service-list li {
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    position: relative; }
+    /* line 12, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page-services.scss */
+    .service-list li h3 {
+      padding-left: 2rem; }
+    /* line 16, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page-services.scss */
+    .service-list li:before {
+      background: #05AFA5;
+      color: #fefefe;
+      counter-increment: item;
+      content: counter(item);
+      display: inline-block;
+      font-weight: bold;
+      font-family: QuickSand, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      height: 2rem;
+      left: 0;
+      line-height: 2;
+      position: absolute;
+      text-align: center;
+      top: -5px;
+      width: 2rem;
+      border-radius: 50%; }
+    @media screen and (min-width: 40em) {
+      /* line 5, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page-services.scss */
+      .service-list li {
+        padding-left: 2rem; }
+        /* line 37, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page-services.scss */
+        .service-list li h3 {
+          padding-left: 0; }
+        /* line 41, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page-services.scss */
+        .service-list li:before {
+          top: .25rem; } }
+    @media screen and (min-width: 64em) {
+      /* line 5, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page-services.scss */
+      .service-list li {
+        padding-left: 2.5rem; }
+        /* line 48, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page-services.scss */
+        .service-list li:before {
+          font-size: 1.25rem;
+          height: 2.5rem;
+          line-height: 2.5rem;
+          width: 2.5rem; } }
+
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/vendors/_wordpress.scss */
 .alignleft {
   display: inline;

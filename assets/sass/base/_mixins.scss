@@ -30,3 +30,9 @@
 		margin-right: .5rem;
 	}
 }
+
+@mixin rounded($radius: 50%) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
