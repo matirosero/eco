@@ -4783,12 +4783,12 @@ table.hover tr:nth-of-type(even):hover {
   margin-right: auto; }
 
 /* line 138, /Users/Mati/Sites/soyeco/wp-content/themes/eco/node_modules/foundation-sites/scss/util/_mixins.scss */
-.clearfix::before, .clearfix::after {
+.clearfix::before, .nav-links::before, .clearfix::after, .nav-links::after {
   content: ' ';
   display: table; }
 
 /* line 148, /Users/Mati/Sites/soyeco/wp-content/themes/eco/node_modules/foundation-sites/scss/util/_mixins.scss */
-.clearfix::after {
+.clearfix::after, .nav-links::after {
   clear: both; }
 
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_base.scss */
@@ -5018,6 +5018,10 @@ label {
 .mc4wp-form input[type='text'], .mc4wp-form input[type='password'], .mc4wp-form input[type='email'] {
   display: inline-block;
   width: 47%; }
+
+/* line 30, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+.comment-subscription-form {
+  margin-bottom: 0; }
 
 /* line 3, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_topbar.scss */
 #main-menu {
@@ -5307,15 +5311,15 @@ a.ofc-home {
     .page-section {
       padding: 2rem 0; } }
 
-/* line 18, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
-.blog .post {
+/* line 17, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
+.post {
   padding: 1rem 0; }
   @media screen and (min-width: 64em) {
-    /* line 18, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
-    .blog .post {
+    /* line 17, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
+    .post {
       padding: 2rem 0; } }
   /* line 24, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
-  .blog .post:first-of-type {
+  .post:first-of-type {
     padding-top: 0; }
 
 /* line 30, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
@@ -5349,15 +5353,16 @@ a.ofc-home {
   border: none;
   margin: 0; }
 
-/* line 63, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
-.entry-content p {
-  margin-bottom: 1rem; }
+@media screen and (min-width: 40em) {
+  /* line 65, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
+  .single-post .entry-content {
+    padding: .5rem 0; } }
 
-/* line 68, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
+/* line 74, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
 .entry-footer .tags-links + .comments-link {
   display: block; }
   @media screen and (min-width: 64em) {
-    /* line 68, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
+    /* line 74, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
     .entry-footer .tags-links + .comments-link {
       display: inline;
       margin-left: .5rem; }
@@ -5365,6 +5370,25 @@ a.ofc-home {
       .entry-footer .tags-links + .comments-link:before {
         content: '|';
         margin-right: .5rem; } }
+
+/* line 86, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
+.single .nav-links {
+  padding: 0 0 1rem; }
+  @media screen and (min-width: 64em) {
+    /* line 86, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
+    .single .nav-links {
+      padding: 0 0 2rem; } }
+
+/* line 90, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
+.nav-links .nav-previous {
+  float: left;
+  width: 50%; }
+
+/* line 94, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
+.nav-links .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
 
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page-about.scss */
 .about-main,
