@@ -12,10 +12,13 @@
 
 .post {
 	.blog & {
-		padding: 0 0 2rem;
+		padding: 1rem 0;
 		// border-bottom: 1px dashed $medium-gray;
 		@include breakpoint(large) {
-			padding: 0 0 4rem;
+			padding: 2rem 0;
+		}
+		&:first-of-type {
+			padding-top: 0;
 		}
 	}
 }
