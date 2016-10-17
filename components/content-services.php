@@ -15,7 +15,7 @@
 		</header><!-- .entry-header -->
 	<?php endif; ?>
 
-	<section class="services-info">
+	<section id="service-info" class="page-section">
 
 		<?php
 
@@ -52,7 +52,17 @@
 		?>
 
 
-	</section><!-- .services -->
+	</section><!-- #service-info -->
+
+	<section id="service-form" class="page-section">
+
+		<h2><?php the_field('services_form_header'); ?></h2>
+
+		<?php the_field('services_form_text'); ?>
+
+		<?php the_field('service_form'); ?>
+
+	</section><!-- #service-form -->
 
 	<footer class="entry-footer">
 		<?php

@@ -1,3 +1,25 @@
+.wpcf7 {
+	margin: 2rem 0;
+}
+
+label {
+	font-family: $header-font-family;
+	text-transform: uppercase;
+	[type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+		font-family: $body-font-family;
+		font-size: 1rem;
+	}
+}
+
+[type='date'] {
+	width: auto;
+}
+
+.wpcf7-list-item {
+	margin-right:1rem;
+	// font-size: $small-font-size;
+}
+
 .mc4wp-form {
 	input[type='text'], input[type='password'], input[type='email'] {
 		display: inline-block;

@@ -83,6 +83,10 @@ p {
 				color:$body-font-color;
 			}
 		}
+
+		.page-servicios & {
+			margin-bottom: 0;
+		}
 	}
 
 	@include breakpoint(medium) {
@@ -121,6 +125,21 @@ p {
 	#featured-hero & {
 		color: $white;
 		@include hero-text-shadow;
+
+		.page-servicios & {
+			font-family: 'Reenie Beanie';
+			font-size: 1.25rem;
+			@include breakpoint(medium) {
+				font-size: 1.75rem;
+			}
+			@include breakpoint(large) {
+				font-size: 2.5rem;
+			}
+
+		}
+	}
+	.page-servicios & {
+
 	}
 	@include breakpoint(medium) {
 		font-size: 1.25rem;
