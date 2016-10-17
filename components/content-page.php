@@ -17,6 +17,11 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+		<?php 
+		if (is_page('Contactanos')) :
+			echo do_shortcode( '[contact-form-7 id="89" title="Contactanos"]' ); 
+		endif;
+		?>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'eco' ),
