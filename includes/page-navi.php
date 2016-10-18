@@ -1,4 +1,7 @@
 <?php
+// From JointsWP:
+// https://github.com/JeremyEnglert/JointsWP/blob/master/assets/functions/page-navi.php
+
 // Numeric Page Navi (built into the theme by default)
 function joints_page_navi($before = '', $after = '') {
 	global $wpdb, $wp_query;
