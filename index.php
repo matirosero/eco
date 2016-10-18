@@ -42,7 +42,14 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php the_posts_navigation(); ?>
+				<?php 
+				if (function_exists("joints_page_navi")) :
+				    // $wp_query = $more_posts;
+				//echo '<div>$wp_query ='.$wp_query->max_num_pages.'</div>';
+				    joints_page_navi();
+				else:
+					the_posts_navigation(); 
+				endif; ?>
 
 			<?php else : ?>
 
