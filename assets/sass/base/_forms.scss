@@ -1,5 +1,19 @@
+form {
+	@include block-bottom-padding;
+}
+
 .wpcf7 {
 	margin: 2rem 0;
+}
+
+fieldset {
+	margin-bottom: 1rem;
+}
+
+legend {
+	font-family: $header-font-family;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 label {

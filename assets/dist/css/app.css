@@ -5021,32 +5021,50 @@ input[type="button"] {
   font-size: 80%; }
 
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+form {
+  padding: 0 0 1rem; }
+  @media screen and (min-width: 64em) {
+    /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+    form {
+      padding: 0 0 2rem; } }
+
+/* line 5, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
 .wpcf7 {
   margin: 2rem 0; }
 
-/* line 5, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+/* line 9, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+fieldset {
+  margin-bottom: 1rem; }
+
+/* line 13, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+legend {
+  font-family: QuickSand, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+/* line 19, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
 label {
   font-family: QuickSand, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   text-transform: uppercase; }
-  /* line 8, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+  /* line 22, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
   label [type='text'], label [type='password'], label [type='date'], label [type='datetime'], label [type='datetime-local'], label [type='month'], label [type='week'], label [type='email'], label [type='number'], label [type='search'], label [type='tel'], label [type='time'], label [type='url'], label [type='color'], label textarea {
     font-family: "PT Serif", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 1rem; }
 
-/* line 14, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+/* line 28, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
 [type='date'] {
   width: auto; }
 
-/* line 18, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+/* line 32, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
 .wpcf7-list-item {
   margin-right: 1rem; }
 
-/* line 24, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+/* line 38, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
 .mc4wp-form input[type='text'], .mc4wp-form input[type='password'], .mc4wp-form input[type='email'] {
   display: inline-block;
   width: 47%; }
 
-/* line 30, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+/* line 44, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
 .comment-subscription-form {
   margin-bottom: 0; }
 
@@ -5632,9 +5650,7 @@ figure {
   padding: 1.08696rem; }
   /* line 6, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/vendors/_edd.scss */
   .entry-content #edd_login_form {
-    border: 1px solid #e6e6e6;
-    background: #05AFA5;
-    color: #fefefe; }
+    border: 1px solid #e6e6e6; }
 
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
 body {
@@ -5654,6 +5670,10 @@ body {
   background-color: transparent; }
 
 /* line 17, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
+.home .top-bar ul ul {
+  background-color: #fefefe; }
+
+/* line 20, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
 .home #main-menu .top-bar-right > ul > li > a {
   line-height: 1.5; }
 

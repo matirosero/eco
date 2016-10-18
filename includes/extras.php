@@ -76,7 +76,7 @@ function my_wp_nav_menu_items( $items, $args, $ajax = false ) {
 					</li>';
 
 				$items .= $login;
-			}
+			} 
 
 		}
 
