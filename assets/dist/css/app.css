@@ -5625,6 +5625,17 @@ figure {
     figure {
       margin: 0 0 3.125em 0; } }
 
+/* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/vendors/_edd.scss */
+#edd_login_form {
+  margin: 0 auto;
+  max-width: 24.45652rem;
+  padding: 1.08696rem; }
+  /* line 6, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/vendors/_edd.scss */
+  .entry-content #edd_login_form {
+    border: 1px solid #e6e6e6;
+    background: #05AFA5;
+    color: #fefefe; }
+
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
 body {
   position: inherit; }

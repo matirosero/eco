@@ -119,6 +119,6 @@ if ( is_user_logged_in() ):
 
 	<?php
 else:
-	echo '<p>' . __( 'You need to login to edit your profile.', 'easy-digital-downloads' ) . '</p>';
+	echo '<p class="text-center">' . __( 'You need to login to edit your profile.', 'easy-digital-downloads' ) . '</p>';
 	echo edd_login_form();
 endif;

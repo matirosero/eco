@@ -48,21 +48,38 @@ function my_wp_nav_menu_items( $items, $args, $ajax = false ) {
 	if ( ( isset( $ajax ) && $ajax ) || ( property_exists( $args, 'theme_location' ) && ( $args->theme_location === 'primary' || $args->theme_location === 'mobile-nav' ) ) ) {
 
 		// Easy Digital Downloads
-		if ( class_exists( 'Easy_Digital_Downloads' ) && edd_get_cart_quantity() != 0 ) {
+		if ( class_exists( 'Easy_Digital_Downloads' ) ) {
 
-			$css_class = 'menu-item menu-item-type-cart menu-item-type-edd-cart';
+			if ( edd_get_cart_quantity() != 0 ) {
 
-			// Is this the cart page?
-			if ( edd_is_checkout() )
-				$css_class .= ' current-menu-item';
+				$css_class = 'menu-item menu-item-type-cart menu-item-type-edd-cart';
 
-			$items .= '<li class="' . esc_attr( $css_class ) . '">';
-				$items .= '<a class="cart-contents" href="' . esc_url( edd_get_checkout_uri() ) . '">';
-					$items .= wp_kses_data( edd_cart_subtotal() ) . ' - <span class="count">' .  wp_kses_data( sprintf( _n( '%d item', '%d items', edd_get_cart_quantity(), 'foundationpress' ), edd_get_cart_quantity() ) ) . '</span>';
-				$items .= '</a>';
-			$items .= '</li>';
+				// Is this the cart page?
+				if ( edd_is_checkout() )
+					$css_class .= ' current-menu-item';
+
+				$items .= '<li class="' . esc_attr( $css_class ) . '">';
+					$items .= '<a class="cart-contents" href="' . esc_url( edd_get_checkout_uri() ) . '">';
+						$items .= wp_kses_data( edd_cart_subtotal() ) . ' - <span class="count">' .  wp_kses_data( sprintf( _n( '%d item', '%d items', edd_get_cart_quantity(), 'foundationpress' ), edd_get_cart_quantity() ) ) . '</span>';
+					$items .= '</a>';
+				$items .= '</li>';
+
+			}
+
+			//Add Login dropdown to menu
+			if ( !is_user_logged_in() ) {
+				$login = '<li class="menu-item menu-item-has-children is-dropdown-submenu-parent opens-left">
+						<a href="#">Entrar</a>
+						<ul class="menu submenu is-dropdown-submenu first-sub vertical" data-submenu="" aria-hidden="true" role="menu">
+							<li id="menu-item-380" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-380 is-submenu-item is-dropdown-submenu-item" role="menuitem">'.do_shortcode( '[edd_login]' ).'</li>
+						</ul>
+					</li>';
+
+				$items .= $login;
+			}
 
 		}
+
 
 		$social_sites = my_customizer_social_media_array();
 

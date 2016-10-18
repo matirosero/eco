@@ -1,0 +1,11 @@
+#edd_login_form {
+	// background: $light-gray;
+	margin: 0 auto;
+	max-width: rem-calc(450px);
+	padding: rem-calc(20px);
+	.entry-content & {
+		border: 1px solid $light-gray;
+		background: $green;
+		color: $white;
+	}
+}

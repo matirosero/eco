@@ -64,6 +64,8 @@ get_header(); ?>
 
 		</div><!-- .row .home-section -->
 			FREE DOWNLOAD THINGY HERE
+			<?php echo do_shortcode( '[edd_login]' ); ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
