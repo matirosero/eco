@@ -5126,8 +5126,9 @@ a.ofc-home {
   height: 10.86957rem; }
   /* line 9, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_hero.scss */
   .home #featured-hero {
-    min-height: 10.86957rem; }
-  /* line 20, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_hero.scss */
+    height: 90vh;
+    max-height: 100vw; }
+  /* line 22, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_hero.scss */
   #featured-hero .hero-text {
     width: 75%;
     overflow: auto;
@@ -5142,14 +5143,14 @@ a.ofc-home {
     /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_hero.scss */
     #featured-hero {
       height: 24.45652rem; }
-      /* line 41, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_hero.scss */
+      /* line 43, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_hero.scss */
       #featured-hero .hero-text {
         width: 40%;
         height: 50%;
         top: 0;
         left: 30px;
         padding: 0; }
-        /* line 49, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_hero.scss */
+        /* line 51, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_hero.scss */
         .home #featured-hero .hero-text {
           height: 65%;
           width: 49%;
@@ -5158,10 +5159,10 @@ a.ofc-home {
     /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_hero.scss */
     #featured-hero {
       height: 30.97826rem; }
-      /* line 60, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_hero.scss */
+      /* line 62, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_hero.scss */
       #featured-hero .hero-text {
         left: 40px; }
-        /* line 64, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_hero.scss */
+        /* line 66, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_hero.scss */
         .home #featured-hero .hero-text {
           height: 55%;
           width: 40%; } }
@@ -5640,5 +5641,9 @@ body {
 /* line 14, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
 .home .top-bar, .home .top-bar ul {
   background-color: transparent; }
+
+/* line 17, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
+.home #main-menu .top-bar-right > ul > li > a {
+  line-height: 1.5; }
 
 /*# sourceMappingURL=app.css.map */

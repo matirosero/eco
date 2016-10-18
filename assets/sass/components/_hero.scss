@@ -7,7 +7,9 @@
 	height: rem-calc(200);
 
 	.home & {
-		min-height: rem-calc(200);
+		// min-height: rem-calc(200);
+		height: 90vh;
+		max-height: 100vw;
 	}
 
 	// .no-featured-image-set {
