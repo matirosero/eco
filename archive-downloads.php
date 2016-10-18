@@ -10,23 +10,23 @@
 
 get_header(); ?>
 
-<?php get_template_part( 'components/content', 'hero' ); ?>
+
+
+
+<?php //get_template_part( 'components/content', 'hero' ); ?>
 
 <div class="row column">
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+			<header class="page-header">
+				<h1 class="page-title"><em>Tienda</em> ECO</h1>
+			</header>
+
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'components/content', 'page' ); ?>
-
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
+				<?php get_template_part( 'components/content', 'downloads' ); ?>
 
 			<?php endwhile; // End of the loop. ?>
 
