@@ -2,8 +2,15 @@ input[type="submit"],
 input[type="button"] {
   @include button;
   @include button-text;
+  font-size: $small-font-size;
+
 }
 
 .button {
 	@include button-text;
+
+}
+
+.button:not(.tiny):not(.small):not(.large) {
+	font-size: $small-font-size;
 }

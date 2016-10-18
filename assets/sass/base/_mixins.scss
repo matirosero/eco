@@ -16,10 +16,10 @@
 	}
 }
 
-@mixin button-text {
+@mixin button-text($weight:bold) {
 	font-family: $header-font-family;
-	font-size: $small-font-size;
-	font-weight:bold;
+	// font-size: $small-font-size;
+	font-weight: $weight;
 	text-transform: uppercase;
 }
 

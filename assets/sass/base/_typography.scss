@@ -145,3 +145,24 @@ p {
 		font-size: 1.25rem;
 	}
 }
+
+.comments-title {
+	font-size: 1rem;
+	@include breakpoint(medium) {
+		font-size: rem-calc(20px);
+	}
+	@include breakpoint(large) {
+		font-size: rem-calc(24px);
+	}
+}
+
+.comment-author,
+.comment-metadata {
+	@include button-text(normal);
+	font-size: $small-font-size;
+	.fn {
+		font-size: 1rem;
+	}
+}
+
+//http://www.wpbeginner.com/wp-themes/how-to-style-your-wordpress-comments-layout/
