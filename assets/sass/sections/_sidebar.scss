@@ -1,7 +1,7 @@
 #secondary {
 	background-color: $light-gray;
 	padding: 2rem 0;
-	font-size: rem-calc(16px);
+	font-size: $small-font-size;
 
 	.widget {
 		background: $white;
@@ -64,6 +64,7 @@
 		.rpwwt-post-title {
 			display: block;
 			padding: .5rem .75rem .5rem 0;
+			line-height: 1.4;
 		}
 	}
 }

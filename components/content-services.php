@@ -54,7 +54,7 @@
 
 	</section><!-- #service-info -->
 
-	<section id="service-form" class="page-section">
+	<section id="service-request-form" class="page-section">
 
 		<h2><?php the_field('services_form_header'); ?></h2>
 
