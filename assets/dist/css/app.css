@@ -3867,7 +3867,7 @@ body {
   .pagination .current {
     padding: 0.16304rem 0.54348rem;
     background: #F36E45;
-    color: #0a0a0a;
+    color: #fefefe;
     cursor: default; }
   /* line 138, /Users/Mati/Sites/soyeco/wp-content/themes/eco/node_modules/foundation-sites/scss/components/_pagination.scss */
   .pagination .disabled {
@@ -5482,6 +5482,10 @@ a.ofc-home {
   float: right;
   text-align: right;
   width: 50%; }
+
+/* line 101, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page.scss */
+.page-navigation {
+  text-align: center; }
 
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page-about.scss */
 .about-main,

@@ -35,11 +35,12 @@ function joints_page_navi($before = '', $after = '') {
 	}
 	echo $before.'<nav class="page-navigation"><ul class="pagination">'."";
 	if ($start_page >= 2 && $pages_to_show < $max_page) {
-		$first_page_text = __( 'First', 'jointswp' );
+		$first_page_text = __( 'First', 'eco' );
 		echo '<li><a href="'.get_pagenum_link().'" title="'.$first_page_text.'">'.$first_page_text.'</a></li>';
 	}
 	echo '<li>';
-	previous_posts_link( __('Previous', 'jointswp') );
+	previous_posts_link( '&laquo;' );
+	// previous_posts_link( __('Previous', 'eco') );
 	echo '</li>';
 	for($i = $start_page; $i  <= $end_page; $i++) {
 		if($i == $paged) {
@@ -49,10 +50,11 @@ function joints_page_navi($before = '', $after = '') {
 		}
 	}
 	echo '<li>';
-	next_posts_link( __('Next', 'jointswp'), 0 );
+	next_posts_link( '&raquo;', 0 );
+	// next_posts_link( __('Next', 'eco'), 0 );
 	echo '</li>';
 	if ($end_page < $max_page) {
-		$last_page_text = __( 'Last', 'jointswp' );
+		$last_page_text = __( 'Last', 'eco' );
 		echo '<li><a href="'.get_pagenum_link($max_page).'" title="'.$last_page_text.'">'.$last_page_text.'</a></li>';
 	}
 	echo '</ul></nav>'.$after."";
