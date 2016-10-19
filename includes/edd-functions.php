@@ -138,6 +138,7 @@ function get_payment_ids( $download_id = '' ) {
  */
 function eco_edd_downloads_query( $atts, $content = null ) {
 	$atts = shortcode_atts( array(
+		'show_category'    => 'no',
 		'category'         => '',
 		'exclude_category' => '',
 		'tags'             => '',
@@ -373,6 +374,7 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 		ob_start(); ?>
 
 		<ul class="shop-list">
+
 		<!-- <div class="edd_downloads_list <?php echo apply_filters( 'edd_downloads_list_wrapper_class', $wrapper_class, $atts ); ?>"> -->
 
 			<?php while ( $downloads->have_posts() ) : $downloads->the_post(); ?>
@@ -396,6 +398,7 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 
 						echo '<div class="medium-7 columns">';
 							edd_get_template_part( 'shortcode', 'content-title' );
+							echo '<h4>'.get_field('downloads_subtitle').'</h4>';
 							do_action( 'edd_download_after_title' );
 
 							if ( $atts['excerpt'] == 'yes' && $atts['full_content'] != 'yes' ) {
@@ -408,6 +411,12 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 						echo '</div>';
 
 						echo '<div class="medium-3 columns">';
+							
+							if ( $atts['show_category'] == 'yes' ) {
+								edd_get_template_part( 'shortcode', 'content-taxonomies' );
+								// do_action( 'edd_download_after_taxonomies' );
+							}
+
 							if ( $atts['price'] == 'yes' ) {
 								edd_get_template_part( 'shortcode', 'content-price' );
 								do_action( 'edd_download_after_price' );
@@ -477,3 +486,4 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 	return apply_filters( 'downloads_shortcode', $display, $atts, $atts['buy_button'], $atts['columns'], '', $downloads, $atts['excerpt'], $atts['full_content'], $atts['price'], $atts['thumbnails'], $query );
 }
 add_shortcode( 'eco_downloads', 'eco_edd_downloads_query' );
+

@@ -1,0 +1,16 @@
+.shop-list {
+	list-style: none;
+	margin-left: 0;
+	@include section-padding;
+	@extend .clearfix;
+}
+
+.shop-item {
+	border-bottom: 1px solid $light-gray;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	@include breakpoint(medium) {
+		padding-bottom: 2rem;
+		margin-bottom: 2rem;
+	}
+}
