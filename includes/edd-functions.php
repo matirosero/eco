@@ -396,7 +396,7 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 							echo '</div>';
 						endif;
 
-						echo '<div class="medium-7 columns">';
+						echo '<div class="medium-6 large-7 columns">';
 							edd_get_template_part( 'shortcode', 'content-title' );
 							echo '<h4>'.get_field('downloads_subtitle').'</h4>';
 							do_action( 'edd_download_after_title' );
@@ -410,7 +410,7 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 							}
 						echo '</div>';
 
-						echo '<div class="medium-3 columns">';
+						echo '<div class="medium-4 large-3 columns">';
 							
 							if ( $atts['show_category'] == 'yes' ) {
 								edd_get_template_part( 'shortcode', 'content-taxonomies' );
