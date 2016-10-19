@@ -5200,35 +5200,46 @@ a.ofc-home {
   border-bottom: 1px solid #e6e6e6;
   padding-bottom: 1rem;
   margin-bottom: 1rem; }
+  /* line 13, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
+  .shop-item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  @media screen and (max-width: 39.9375em) {
+    /* line 20, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
+    .shop-item .edd_download_image {
+      margin-bottom: 1.5rem;
+      text-align: center; } }
   @media screen and (min-width: 40em) {
     /* line 8, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
     .shop-item {
       padding-bottom: 2rem;
       margin-bottom: 2rem; } }
 
-/* line 18, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
+/* line 31, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
 .shop-item-title {
   margin: 0;
-  font-size: 1.30435rem; }
-  /* line 22, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
+  font-size: 1.30435rem;
+  font-weight: bold; }
+  /* line 36, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
   .shop-item-title + .shop-item-subtitle {
     font-size: 1rem; }
 
-/* line 27, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
+/* line 41, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
 .shop-item-footer {
   font-family: QuickSand, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   text-transform: uppercase;
   text-align: center; }
-  /* line 31, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
+  /* line 45, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
   .shop-item-footer .shop-download-terms a {
     font-weight: bold; }
-  /* line 34, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
+  /* line 48, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
   .shop-item-footer .edd_price {
     line-height: 1; }
-  /* line 37, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
+  /* line 51, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
   .shop-item-footer .edd_download_purchase_form {
     padding: 0; }
-  /* line 40, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
+  /* line 54, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
   .shop-item-footer .button, .shop-item-footer .comment-reply-link {
     margin-bottom: 0; }
 
