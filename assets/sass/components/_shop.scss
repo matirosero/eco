@@ -1,7 +1,7 @@
 .shop-list {
 	list-style: none;
 	margin-left: 0;
-	@include section-padding;
+	@include block-bottom-padding;
 	@extend .clearfix;
 }
 
@@ -12,5 +12,32 @@
 	@include breakpoint(medium) {
 		padding-bottom: 2rem;
 		margin-bottom: 2rem;
+	}
+}
+
+.shop-item-title {
+	margin: 0;
+	font-size: rem-calc(24px);
+
+	+ .shop-item-subtitle {
+		font-size: 1rem;
+	}
+}
+
+.shop-item-footer {
+	font-family: $header-font-family;
+	text-transform: uppercase;
+	text-align: center;
+	.shop-download-terms a {
+		font-weight: bold;
+	}
+	.edd_price {
+		line-height: 1;
+	}
+	.edd_download_purchase_form {
+		padding: 0;
+	}
+	.button {
+		margin-bottom: 0;
 	}
 }

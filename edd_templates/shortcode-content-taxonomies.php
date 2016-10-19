@@ -20,13 +20,11 @@ $download_tags = get_the_term_list( // get the download tags
 
 if ( $download_categories || $download_tags ) {
 	?>
-	<div class="downloads-footer">
-		<div class="vendd-download-terms">
-			<?php echo $download_categories ?>
-		</div>
-		<div class="vendd-download-terms">
-			<?php echo $download_tags ?>
-		</div>
+	<div class="shop-download-terms">
+		<?php echo $download_categories ?>
+	</div>
+	<div class="shop-download-terms">
+		<?php echo $download_tags ?>
 	</div>
 	<?php
 }

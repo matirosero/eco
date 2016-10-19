@@ -11,7 +11,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( !has_post_thumbnail() ) : ?>
 		<header class="entry-header">
-			<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+			<?php if ( is_page('Tienda ECO') ) : ?>
+				<h1 class="page-title"><em>Tienda</em> ECO</h1>
+			<?php else: ?>
+				<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
+			<?php endif; ?>
 		</header><!-- .entry-header -->
 	<?php endif; ?>
 

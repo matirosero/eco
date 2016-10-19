@@ -398,7 +398,7 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 
 						echo '<div class="medium-6 large-7 columns">';
 							edd_get_template_part( 'shortcode', 'content-title' );
-							echo '<h4>'.get_field('downloads_subtitle').'</h4>';
+							echo '<h4 class="shop-item-subtitle">'.get_field('downloads_subtitle').'</h4>';
 							do_action( 'edd_download_after_title' );
 
 							if ( $atts['excerpt'] == 'yes' && $atts['full_content'] != 'yes' ) {
@@ -410,7 +410,7 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 							}
 						echo '</div>';
 
-						echo '<div class="medium-4 large-3 columns">';
+						echo '<footer class="shop-item-footer medium-4 large-3 columns">';
 							
 							if ( $atts['show_category'] == 'yes' ) {
 								edd_get_template_part( 'shortcode', 'content-taxonomies' );
@@ -424,7 +424,7 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 
 							if ( $atts['buy_button'] == 'yes' )
 								edd_get_template_part( 'shortcode', 'content-cart-button' );
-						echo '</div>';
+						echo '</footer>';
 
 						do_action( 'edd_download_after' );
 

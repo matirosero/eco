@@ -22,7 +22,7 @@ get_header(); ?>
 
 		<div id="primary" class="content-area row<?php if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) { echo ' collapse'; } ?>" data-equalizer-watch >
 
-			<?php 
+			<?php
 			if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) : ?>
 				<main id="main" class="site-main small-12 columns" role="main">
 			<?php else: ?>
@@ -31,14 +31,14 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php 
+					<?php
 
 					if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) :
-						get_template_part( 'components/content', 'about' ); 
+						get_template_part( 'components/content', 'about' );
 					elseif ( is_page('Servicios') ) :
-						get_template_part( 'components/content', 'services' ); 
+						get_template_part( 'components/content', 'services' );
 					else:
-						get_template_part( 'components/content', 'page' ); 
+						get_template_part( 'components/content', 'page' );
 					endif;
 					?>
 
