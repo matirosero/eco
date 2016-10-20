@@ -1,0 +1,43 @@
+.free-download-form {
+	max-width: rem-calc(356px);
+	background-image: url(../../img/ebook-bg.jpg);
+	background-position: 0 100%;
+	background-size: cover;
+	text-align: center;
+	position: relative;
+	@include responsive-padding($vpadding: 2rem);
+
+	.free-download-container {
+		
+	}
+
+	h2,
+	p {
+		text-shadow: 0px 0px 10px rgba(255, 255, 255, .75);
+	}
+
+	h2 {
+		color: $green;
+		font-size: 3rem;
+		font-weight: bold;
+
+	}
+
+	p {
+		@include button-text;
+		line-height: 1.25;
+	}
+
+	form {
+		padding: 0;
+		.newsletter-signup {
+			// margin-bottom: 0;
+		}
+
+	}
+
+	.mc4wp-form input[type='text'], .mc4wp-form input[type='password'], .mc4wp-form input[type='email'] {
+		display: block;
+		width: 100%;
+	}
+}

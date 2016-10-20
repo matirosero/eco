@@ -5243,6 +5243,46 @@ a.ofc-home {
   .shop-item-footer .button, .shop-item-footer .comment-reply-link {
     margin-bottom: 0; }
 
+/* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+.free-download-form {
+  max-width: 19.34783rem;
+  background-image: url(../../img/ebook-bg.jpg);
+  background-position: 0 100%;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  padding: 2rem 20px; }
+  @media screen and (min-width: 40em) {
+    /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+    .free-download-form {
+      padding: 2rem 30px; } }
+  @media screen and (min-width: 64em) {
+    /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+    .free-download-form {
+      padding: 2rem 40px; } }
+  /* line 14, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+  .free-download-form h2,
+  .free-download-form p {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.75); }
+  /* line 19, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+  .free-download-form h2 {
+    color: #05AFA5;
+    font-size: 3rem;
+    font-weight: bold; }
+  /* line 26, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+  .free-download-form p {
+    font-family: QuickSand, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.25; }
+  /* line 31, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+  .free-download-form form {
+    padding: 0; }
+  /* line 39, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+  .free-download-form .mc4wp-form input[type='text'], .free-download-form .mc4wp-form input[type='password'], .free-download-form .mc4wp-form input[type='email'] {
+    display: block;
+    width: 100%; }
+
 /* line 2, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_svg.scss */
 .icon {
   display: inline-block;

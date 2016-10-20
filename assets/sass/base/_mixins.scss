@@ -36,3 +36,13 @@
   -moz-border-radius: $radius;
   border-radius: $radius;
 }
+
+@mixin responsive-padding($vpadding: 0) {
+	padding: $vpadding map-get($grid-column-gutter, small);
+	@include breakpoint(medium) {
+		padding: $vpadding map-get($grid-column-gutter, medium);
+	}
+	@include breakpoint(large) {
+		padding: $vpadding map-get($grid-column-gutter, large);
+	}
+}
