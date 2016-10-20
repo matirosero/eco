@@ -3,6 +3,10 @@
 	&.compact {
 		max-width: rem-calc(356px);
 	}
+
+	.widget & {
+		padding: 0;
+	}
 }
 
 .free-download-title {

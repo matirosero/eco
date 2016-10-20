@@ -1,5 +1,8 @@
 <?php
 
+// Enable shortcodes in text widgets
+add_filter('widget_text','do_shortcode');
+
 //Register shortcodes
 function register_shortcodes(){
    add_shortcode('recent-posts', 'recent_posts_function');

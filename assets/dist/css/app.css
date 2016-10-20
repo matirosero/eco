@@ -5253,13 +5253,16 @@ a.ofc-home {
   /* line 3, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
   .free-download.compact {
     max-width: 19.34783rem; }
+  /* line 7, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+  .widget .free-download {
+    padding: 0; }
 
-/* line 10, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+/* line 14, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
 .free-download-title .subtitle {
   display: block;
   font-weight: normal; }
 
-/* line 16, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+/* line 20, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
 .free-download-form {
   background-image: url(../../img/ebook-bg.jpg);
   background-position: 0 100%;
@@ -5268,32 +5271,32 @@ a.ofc-home {
   position: relative;
   padding: 2rem 20px; }
   @media screen and (min-width: 40em) {
-    /* line 16, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+    /* line 20, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
     .free-download-form {
       padding: 2rem 30px; } }
   @media screen and (min-width: 64em) {
-    /* line 16, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+    /* line 20, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
     .free-download-form {
       padding: 2rem 40px; } }
-  /* line 29, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+  /* line 33, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
   .free-download-form h2,
   .free-download-form p {
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.75); }
-  /* line 34, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+  /* line 38, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
   .free-download-form h2 {
     color: #05AFA5;
     font-size: 3rem;
     font-weight: bold; }
-  /* line 41, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+  /* line 45, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
   .free-download-form p {
     font-family: QuickSand, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
     line-height: 1.25; }
-  /* line 46, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+  /* line 50, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
   .free-download-form form {
     padding: 0; }
-  /* line 54, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
+  /* line 58, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
   .free-download-form .mc4wp-form input[type='text'], .free-download-form .mc4wp-form input[type='password'], .free-download-form .mc4wp-form input[type='email'] {
     display: block;
     width: 100%; }
