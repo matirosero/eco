@@ -1,3 +1,13 @@
+	.widget-title {
+		background-color: $green;
+		color: $white;
+		font-size: 1rem;
+		font-weight: bold;
+		margin:0;
+		padding: 1rem map-get($grid-column-gutter, small);
+		text-align: center;
+	}
+	
 #secondary {
 	background-color: $light-gray;
 	padding: 2rem 0;
@@ -28,15 +38,7 @@
 		}
 	}
 
-	.widget-title {
-		background-color: $green;
-		color: $white;
-		font-size: 1rem;
-		font-weight: bold;
-		margin:0;
-		padding: 1rem map-get($grid-column-gutter, small);
-		text-align: center;
-	}
+
 
 	.rpwwt-widget {
 		margin: 0 1px 2rem;

@@ -1,5 +1,20 @@
+.free-download {
+	@include block-bottom-padding;
+	&.compact {
+		max-width: rem-calc(356px);
+	}
+}
+
+.free-download-title {
+	@extend .widget-title;
+	.subtitle {
+		display: block;
+		font-weight: normal;
+	}
+}
+
 .free-download-form {
-	max-width: rem-calc(356px);
+	
 	background-image: url(../../img/ebook-bg.jpg);
 	background-position: 0 100%;
 	background-size: cover;

@@ -52,15 +52,32 @@ function free_download_function($atts) {
       	'type' => 'compact',
 	), $atts));
 
-   	$form = do_shortcode('[mc4wp_form id="44"]');
-   	$form = str_replace('Inscribite', 'Recibí ebook gratuito', $form);
+	if ( $type == 'extended' ) :
+		$class = 'extended';
+	else:
+		$class = 'compact';
+	endif;
 
+	$return_string = '<aside class="free-download '.$class.'">';
 
+	if ( $type == 'extended' ) :
 
+		$return_string .= mailchimp_form_for_download();
 
-	$return_string = '<aside class="free-download">';
+		$return_string .= '<div class="free-download-info>
+			<div class="free-download-container">
+			</div>
+		</div>';
 
-	$return_string .= mailchimp_form_for_download();
+	else :
+		$return_string .= '<h2 class="free-download-title">
+			E-book gratuito
+			<span class="subtitle">Primeros pasos - Creando tu propio negocio</span>
+		</h2>';
+		$return_string .= mailchimp_form_for_download();
+	endif;
+
+	
 
 
 	if ($type == 'extended') :
