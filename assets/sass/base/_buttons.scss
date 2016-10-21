@@ -2,13 +2,14 @@ input[type="submit"],
 input[type="button"] {
   @include button;
   @include button-text;
+  line-height: 1.25;
   font-size: $small-font-size;
 
 }
 
 .button {
 	@include button-text;
-
+	line-height: 1.25;
 }
 
 .button:not(.tiny):not(.small):not(.large) {

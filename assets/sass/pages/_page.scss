@@ -79,6 +79,9 @@
 			@include type-separator;
 		}
 	}
+	.comments-link + .edit-link {
+		@include type-separator;
+	}
 }
 
 .nav-links {

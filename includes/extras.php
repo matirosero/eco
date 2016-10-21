@@ -122,7 +122,7 @@ function my_wp_nav_menu_items( $items, $args, $ajax = false ) {
  * Modify Excerpt: change [...] tp Read More 
  */
 function new_excerpt_more( $more ) {
-	return '... </p><p><a class="button read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'foundationpress') . ' <i class="fa fa-arrow-right" aria-hidden="true"></i></a>';
+	return '... </p><p><a class="button read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'eco') . ' <i class="fa fa-arrow-right" aria-hidden="true"></i></a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
