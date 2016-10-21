@@ -32,13 +32,16 @@ function recent_posts_function($atts) {
    return $return_string;
 }
 
-function mailchimp_form_for_download() {
+function mailchimp_form_for_download($equalizer=false) {
    	$form = do_shortcode('[mc4wp_form id="44"]');
    	$form = str_replace('Inscribite', 'Recibí ebook gratuito', $form);
 
+   	if ($equalizer) :
+   		$equalize = ' data-equalizer-watch';
+   	endif;
 
 	$mailchimp = '<div class="free-download-form">
-		<div class="free-download-container">
+		<div class="free-download-container"'.$equalize.'>
 			<h2>Gratis</h2>
 			<p>Al suscribirte a nuestra lista de correo</p>'
 			.$form
@@ -65,12 +68,30 @@ function free_download_function($atts) {
 
 	if ( $type == 'extended' ) :
 
-		$return_string .= mailchimp_form_for_download();
+		$return_string .= '<div class="row" data-equalizer data-equalize-on="medium">
+			<div class="medium-7 medium-push-5 large-8 large-push-4 columns">
+				<div class="free-download-info">
+					<div class="free-download-container" data-equalizer-watch>
+						<h2>E-book gratuito
+						<span class="subtitle">Primeros pasos - Creando tu propio negocio</span></h2>
 
-		$return_string .= '<div class="free-download-info>
-			<div class="free-download-container">
+						<p class="intro">¿Tenés una excelente idea y no sabés cómo llevarla a buen puerto? Aprendé los primeros pasos que debés dar para iniciar tu propio negocio.</p>
+						<h3 class="show-for-large">Con este e-book aprenderás:</h3>
+						<ul class="show-for-large">
+							<li>Cómo escoger una idea para crear un negocio rentable.</li>
+							<li>Qué habilidades debés desarrollar si querés emprender un proyecto.</li>
+							<li>Determinar el mercado de tu emprendimiento.</li>
+							<li>Diseñar un plan de negocios sencillo que te permita tomar acciones concretas.</li>
+							<li>Herramientas de productividad para implementar tus primeros pasos de emprendedor de manera paralela con tu actual trabajo.</li>
+						</ul>
+					</div>
+				</div>
 			</div>
+			<div class="medium-5 medium-pull-7 large-4 large-pull-8 columns">'
+				.mailchimp_form_for_download(true)
+			.'</div>
 		</div>';
+
 
 	else :
 		$return_string .= '<h2 class="free-download-title">
@@ -79,13 +100,6 @@ function free_download_function($atts) {
 		</h2>';
 		$return_string .= mailchimp_form_for_download();
 	endif;
-
-	
-
-
-	if ($type == 'extended') :
-   		$return_string .= 'EXTENDED';
-   	endif;
 
 	$return_string .= '</aside>';
 

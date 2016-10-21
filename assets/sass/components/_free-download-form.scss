@@ -1,34 +1,36 @@
 .free-download {
-	@include block-bottom-padding;
+	background: $green;
+	margin-bottom: 2rem;
+
 	&.compact {
-		max-width: rem-calc(356px);
+		// max-width: rem-calc(356px);
 	}
 
-	.widget & {
-		padding: 0;
+	&.extended {
+		@include breakpoint(small only) {
+			// max-width: rem-calc(356px);
+			// margin: 0 auto;
+		}
 	}
-}
 
-.free-download-title {
-	@extend .widget-title;
 	.subtitle {
 		display: block;
 		font-weight: normal;
 	}
 }
 
+.free-download-title {
+	@extend .widget-title;
+}
+
 .free-download-form {
-	
+	// max-width: rem-calc(356px);
 	background-image: url(../../img/ebook-bg.jpg);
 	background-position: 0 100%;
 	background-size: cover;
 	text-align: center;
 	position: relative;
 	@include responsive-padding($vpadding: 2rem);
-
-	.free-download-container {
-		
-	}
 
 	h2,
 	p {
@@ -59,4 +61,53 @@
 		display: block;
 		width: 100%;
 	}
+
+	.extended & {
+		display: table;
+		.free-download-container {
+		  display: table-cell;
+		  vertical-align: middle;
+		}
+	}
+}
+
+.free-download-info {
+	background: $green;
+	color: $white;
+	@include responsive-padding($vpadding: 1rem);
+
+	@include breakpoint(medium) {
+		@include responsive-padding($vpadding: 2rem);
+		padding-left: 0 !important;
+		.intro {
+			font-size: 1.25rem;
+		}
+	}
+
+	h2, .intro {
+		text-align: center;
+	}
+
+	.subtitle {
+		font-weight: bold;
+		@include breakpoint(medium) {
+			font-size: 1.5rem;
+		}
+	}
+
+
+	h3 {
+		margin-top: 2rem;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	
+	.intro {
+		margin-bottom: 0;
+		@include breakpoint(large) {
+			margin-bottom: 1rem;
+		}
+	}
+	
 }
