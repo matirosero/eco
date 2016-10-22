@@ -15,82 +15,47 @@ if ( has_post_thumbnail( $post->ID ) ) :
 
 	<?php else:
 
-		//xxxl = default image
-		$mq = '@media only screen and (min-width : 1440px) {
-					#featured-hero {
+		//default image (xxxl) is the fallback
+		$mq = '#featured-hero {
 						background-image: url('.$default_image.')
-					}
 				}';
 
 		if ( !empty( $xlarge_image ) ) :
-			if ( empty( $large_image ) && empty( $medium_image ) && empty( $small_image ) ) :
-				//everything else empty
-				$mq = '#featured-hero {
-					background-image: url('.$xlarge_image.');
-				}'
-				.$mq;
-			else:
-				$mq = '@media only screen and (min-width : 1200px) {
+			$mq .= '@media only screen and (max-width : 1440px) {
 					#featured-hero {
 						background-image: url('.$xlarge_image.')
 					}
-				}'
-				.$mq;
-			endif;
+				}';
 		endif;
+
 		if ( !empty( $large_image ) ) :
-			if ( empty( $medium_image ) && empty( $small_image ) ) :
-				//everything else empty
-				$mq = '#featured-hero {
-					background-image: url('.$large_image.');
-				}'
-				.$mq;
-			else:
-				$mq = '@media only screen and (min-width : 1024px) {
-					#featured-hero {
-						background-image: url('.$large_image.')
-					}
-				}'
-				.$mq;
-			endif;
+			$mq .= '@media only screen and (max-width : 1200px) {
+				#featured-hero {
+					background-image: url('.$large_image.')
+				}
+			}';
 		endif;
+
 		if ( !empty( $medium_image ) ) :
-			if ( empty( $small_image ) ) :
-				//everything else empty
-				$mq = '#featured-hero {
-					background-image: url('.$medium_image.');
-				}'
-				.$mq;
-			else:
-				$mq = '@media only screen and (min-width : 640px) {
-					#featured-hero {
-						background-image: url('.$medium_image.')
-					}
-				}'
-				.$mq;
-			endif;
+			$mq .= '@media only screen and (max-width : 1024px) {
+				#featured-hero {
+					background-image: url('.$medium_image.')
+				}
+			}';
 		endif;
+
 		if ( !empty( $small_image ) ) :
-			$mq = '#featured-hero {
-				background-image: url('.$small_image.');
-			}'
-			.$mq;
+			$mq .= '@media only screen and (max-width : 640px) {
+				#featured-hero {
+					background-image: url('.$small_image.')
+				}
+			}';
 		endif;
 		?>
 
 		<header id="featured-hero" role="banner">
 			<style scoped>
 				<?php echo $mq; ?>
-			
-				/*#featured-hero {
-					background-image: url('<?php echo $xlarge_image; ?>')
-				}
-				@media only screen and (min-width : 1440px) {
-					#featured-hero {
-						background-image: url('<?php echo $default_image; ?>')
-					}
-				}*/
-			
 			</style>
 	<?php endif;
 	?>
