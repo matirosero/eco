@@ -15,3 +15,7 @@ input[type="button"] {
 .button:not(.tiny):not(.small):not(.large) {
 	font-size: $small-font-size;
 }
+
+#edd_login_submit {
+	margin-bottom: 0;
+}

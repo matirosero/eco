@@ -4,12 +4,6 @@ $menu-link-color: $body-font-color;
     color: $menu-item-color-active;
 }
 
-@media screen and (min-width: 40em) {
-	#masthead #main-menu .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a:after {
-	    right: 1rem;
-	}
-}
-
 //Both menus
 #main-menu,
 #utility-menu {
@@ -17,6 +11,18 @@ $menu-link-color: $body-font-color;
 	font-family: $header-font-family;
 	font-weight: bold;
 	text-transform: uppercase;
+
+	@media screen and (min-width: 40em) {
+		padding: 0 .7rem;
+
+		.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a {
+			padding-right: 2rem;
+			&:after {
+				right: 1rem;
+			}
+		}
+
+	}
 }
 
 #utility-bar {
@@ -27,13 +33,27 @@ $menu-link-color: $body-font-color;
 		padding-top: 0;
 		padding-bottom: 0;
 	}
-	.menu > li > a {
+	a {
 		color: $white;
 		padding: 0.5rem 0.5rem;
+		&:after {
+			border-color: $white transparent transparent;
+		}
 		&:hover, &:focus {
-			color: scale-color($white, $lightness: -14%);
+			color: $green-light;
+			&:after {
+				border-color: $green-light transparent transparent;
+			}
 		}
 	}
+	.is-dropdown-submenu,
+	.is-accordion-submenu {
+		border: 0;
+		color: $white;
+	}
+
+
+
 }
 
 #main-menu {
@@ -60,7 +80,7 @@ $menu-link-color: $body-font-color;
 			&:after {
 				border-color: $menu-link-color transparent transparent;
 			}
-			&:hover {
+			&:hover, &:focus {
 				color: $orange;
 				&:after {
 					border-color: $orange transparent transparent;
@@ -80,19 +100,6 @@ $menu-link-color: $body-font-color;
 			}
 		}
 	}
-
-	@media screen and (min-width: 40em) {
-		padding: 0 .7rem;
-
-		.dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a {
-			padding-right: 2rem;
-			&:after {
-				right: 11px;
-			}
-		}
-
-	}
-
 }
 
 
@@ -100,4 +107,17 @@ $menu-link-color: $body-font-color;
 	span {
 		@include hide-for(medium);
 	}
+}
+
+
+@include breakpoint(medium only) {
+	#main-menu,
+	#utility-menu {
+		font-size: 13px;
+	}
+	#main-menu {
+		.menu > li > a {
+			// padding: 0.7rem 0.25rem;
+		}
+	}	
 }

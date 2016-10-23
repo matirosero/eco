@@ -49,9 +49,11 @@ $global-font-size: 115%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $green: #05AFA5;
+$green-light: #D0E7E4;
 $orange: #F36E45;
+$orange-light: #FDDAC8;
 $darkgreen: #0E9594;
-$lightgreen: #C8E3BD;
+$limegreen: #C8E3BD;
 $mustard: #D4B694;
 $purple: #886B7D;
 $foundation-palette: (
@@ -388,7 +390,7 @@ $menu-margin: 0;
 $menu-margin-nested: 1rem;
 $menu-item-padding: 0.7rem .5rem;
 $menu-item-color-active: $green;
-$menu-item-background-active: $white; //map-get($foundation-palette, secondary); //map-get($foundation-palette, primary);
+$menu-item-background-active: transparent; //map-get($foundation-palette, secondary); //map-get($foundation-palette, primary);
 $menu-icon-spacing: 0.25rem;
 
 // 23. Meter

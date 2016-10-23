@@ -25,7 +25,7 @@
 
 <header id="masthead" class="" role="banner">
 
-  <section id="utility-bar" class="expanded row small-collapse">
+  <section id="utility-bar" class="expanded row small-collapse hide-for-small-only">
     <nav id="utility-menu" class="top-bar">
       <!-- <div class="top-bar-title"></div> -->
       <div>
@@ -36,7 +36,7 @@
       </div>
     </nav>
   </section>
-  
+
   <section id="navigation-bar" class="expanded row small-collapse">
 
     <!-- TOPBAR -->
