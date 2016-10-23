@@ -10,9 +10,33 @@ $menu-link-color: $body-font-color;
 	}
 }
 
+//Both menus
+#main-menu,
+#utility-menu {
+	font-size: $small-font-size;
+	font-family: $header-font-family;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#utility-bar {
+	.top-bar, .top-bar ul {
+		background: $green;
+	}
+	.top-bar {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.menu > li > a {
+		color: $white;
+		padding: 0.5rem 0.5rem;
+		&:hover, &:focus {
+			color: scale-color($white, $lightness: -14%);
+		}
+	}
+}
 
 #main-menu {
-	font-size: $small-font-size;
 	.top-bar-left {
 		.menu > li > h1 > a {
 		    display: block;
@@ -30,9 +54,8 @@ $menu-link-color: $body-font-color;
 		// padding-top: rem-calc(23px);
 		a {
 			color: $menu-link-color;
-			font-family: $header-font-family;
-			font-weight: bold;
-			text-transform: uppercase;
+			// font-weight: bold;
+			// text-transform: uppercase;
 			
 			&:after {
 				border-color: $menu-link-color transparent transparent;

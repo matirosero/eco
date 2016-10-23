@@ -8,7 +8,7 @@
 // );
 
 // The Top Menu
-function eco_top_nav() {
+function eco_main_nav() {
 	 wp_nav_menu(array(
         'container' => false,                           // Remove nav container
         'menu_class' => 'vertical medium-horizontal menu',       // Adding custom nav class
@@ -19,6 +19,18 @@ function eco_top_nav() {
         'walker' => new Topbar_Menu_Walker()
     ));
 } 
+
+function eco_utility_nav() {
+     wp_nav_menu(array(
+        'container' => false,                           // Remove nav container
+        'menu_class' => 'vertical medium-horizontal menu',       // Adding custom nav class
+        'items_wrap' => '<ul id="%1$s" class="%2$s" data-responsive-menu="accordion medium-dropdown">%3$s</ul>',
+        'theme_location' => 'utility',//'main-nav',                 // Where it's located in the theme
+        'depth' => 5,                                   // Limit the depth of the nav
+        'fallback_cb' => false,                         // Fallback function (see below)
+        'walker' => new Topbar_Menu_Walker()
+    ));
+}
 
 // Big thanks to Brett Mason (https://github.com/brettsmason) for the awesome walker
 class Topbar_Menu_Walker extends Walker_Nav_Menu {

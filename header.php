@@ -24,7 +24,20 @@
 <?php echo file_get_contents( get_template_directory() . '/assets/dist/sprite/sprite.svg' ); ?>
 
 <header id="masthead" class="" role="banner">
-  <section class="expanded row small-collapse">
+
+  <section id="utility-bar" class="expanded row small-collapse">
+    <nav id="utility-menu" class="top-bar">
+      <!-- <div class="top-bar-title"></div> -->
+      <div>
+        <!-- <div class="top-bar-left"></div> -->
+        <div class="top-bar-right">
+          <?php eco_utility_nav(); ?>
+        </div>
+      </div>
+    </nav>
+  </section>
+  
+  <section id="navigation-bar" class="expanded row small-collapse">
 
     <!-- TOPBAR -->
     <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
@@ -50,7 +63,7 @@
         </ul>
       </section>
       <section class="top-bar-right">
-        <?php eco_top_nav(); ?>
+        <?php eco_main_nav(); ?>
       </section>
     </nav><!-- #site-navigation -->
     <!-- END TOPBAR -->

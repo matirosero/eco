@@ -47,6 +47,7 @@ add_action( 'after_setup_theme', function() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'eco' ),
+		'utility' => esc_html__( 'Utility Menu', 'eco' ),
 	) );
 
 	/*
