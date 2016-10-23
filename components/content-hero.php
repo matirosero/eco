@@ -45,7 +45,7 @@ if ( has_post_thumbnail( $post->ID ) ) :
 		endif;
 
 		if ( !empty( $small_image ) ) :
-			$mq .= '@media only screen and (max-width : 640px) {
+			$mq .= '@media only screen and (max-width : 639px) {
 				#featured-hero {
 					background-image: url('.$small_image.')
 				}

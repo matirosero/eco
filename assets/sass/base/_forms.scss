@@ -39,6 +39,16 @@ label {
 		display: inline-block;
 		width: 47%;
 	}
+
+	#featured-hero & {
+		padding-bottom: 0;
+
+		.newsletter-signup,
+		input[type="submit"], input[type="button"] {
+			margin-bottom: 0;
+		}
+		input[type="submit"], input[type="button"] {}
+	}
 }
 
 .comment-subscription-form {
