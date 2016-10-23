@@ -2,22 +2,24 @@ body {
 	position: inherit; // Fixed the admin bar
 }
 
-.home {
-	#masthead {
-	    border-bottom: 0;
-	    margin-bottom: 0;
-	    background: transparent;
-	    position: absolute;
-	    z-index: 999;
-	    width: 100%;
-	}
-	.top-bar, .top-bar ul {
-	    background-color: transparent;
-	}
-	.top-bar ul ul {
-		background-color: $white;
-	}
-	#main-menu .top-bar-right > ul > li > a {
-		line-height: 1.5;
+@include breakpoint(medium) {
+	.home {
+		#masthead {
+		    border-bottom: 0;
+		    margin-bottom: 0;
+		    background: transparent;
+		    position: absolute;
+		    z-index: 999;
+		    width: 100%;
+		}
+		.top-bar, .top-bar ul {
+		    background-color: transparent;
+		}
+		.top-bar ul ul {
+			background-color: $white;
+		}
+		#main-menu .top-bar-right > ul > li > a {
+			line-height: 1.5;
+		}
 	}
 }

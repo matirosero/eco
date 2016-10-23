@@ -6938,25 +6938,23 @@ p.edd_error {
 body {
   position: inherit; }
 
-/* line 6, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
-.home #masthead {
-  border-bottom: 0;
-  margin-bottom: 0;
-  background: transparent;
-  position: absolute;
-  z-index: 999;
-  width: 100%; }
-
-/* line 14, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
-.home .top-bar, .home .top-bar ul {
-  background-color: transparent; }
-
-/* line 17, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
-.home .top-bar ul ul {
-  background-color: #fefefe; }
-
-/* line 20, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
-.home #main-menu .top-bar-right > ul > li > a {
-  line-height: 1.5; }
+@media screen and (min-width: 40em) {
+  /* line 7, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
+  .home #masthead {
+    border-bottom: 0;
+    margin-bottom: 0;
+    background: transparent;
+    position: absolute;
+    z-index: 999;
+    width: 100%; }
+  /* line 15, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
+  .home .top-bar, .home .top-bar ul {
+    background-color: transparent; }
+  /* line 18, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
+  .home .top-bar ul ul {
+    background-color: #fefefe; }
+  /* line 21, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/_shame.scss */
+  .home #main-menu .top-bar-right > ul > li > a {
+    line-height: 1.5; } }
 
 /*# sourceMappingURL=app.css.map */
