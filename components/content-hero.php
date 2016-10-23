@@ -82,7 +82,7 @@ if ( has_post_thumbnail( $post->ID ) ) :
 					<div class="hero-text">
 						<?php
 						if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) :
-							echo '<h1 class="page-title"><em>Sobre</em> nosotras</h1>';
+							echo '<h1 class="page-title">Sobre <em>nosotras</em></h1>';
 						else:
 							the_title( '<h1 class="page-title">', '</h1>' );
 						endif; ?>

@@ -5,6 +5,7 @@
 	margin: 0;
 	position: relative;
 	height: rem-calc(200);
+	height: 100vw;
 
 	.home & {
 		// min-height: rem-calc(200);
@@ -12,30 +13,36 @@
 		max-height: 100vw;
 	}
 
-	// .no-featured-image-set {
-	// 	height: rem-calc(16) !important;
-	// }
-
-	// > .columns {
-		// position: relative;
-
 	.hero-text {
-		width: 75%;
-
 		overflow: auto;
 		margin: auto;
 		position: absolute;
 
 		left: 0;
 		bottom: 0;
-		// right: 0;
+		right: 0;
 		text-align: center;
 		padding: 0 map-get($grid-column-gutter, small);
 
-		border: 1px solid red;
+		border: 1px solid $light-gray;
 	}
 
 	// }
+	@include breakpoint(385) {
+		.home & .hero-text {
+			// padding: 0 15%;
+			// bottom: 5%;
+			// right: 15%;
+		}
+	}
+
+	@include breakpoint(550) {
+		.home & .hero-text {
+			// padding: 0 25%;
+			// bottom: 10%;
+			// right: 25%;
+		}
+	}
 
 	@include breakpoint(medium) {
 		height: rem-calc(450);
@@ -46,12 +53,15 @@
 			top: 0;
 			left: map-get($grid-column-gutter, medium);
 			padding:  0;
+			right: auto;
 			// background:red;
 
 			.home & {
 				height: 65%;
 				width: 49%;
 				overflow: visible;
+				padding: 0;
+				// margin-top: rem-calc(115px);
 			}
 		}
 	}

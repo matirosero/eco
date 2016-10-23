@@ -72,15 +72,17 @@ p {
 	#featured-hero & {
 		color: $white;
 		line-height: 1;
-		margin-bottom: 1rem;
+		margin-bottom: .5rem;
 		@include hero-text-shadow;
 
 		.home & {
 			color: $green;
 			text-shadow: none;
+			// font-size: 1.25rem;
 
 			em {
 				color:$body-font-color;
+				font-size: 1.5em;
 			}
 		}
 
@@ -93,7 +95,7 @@ p {
 		font-size: 2rem;
 		
 		#featured-hero & {
-
+			margin-bottom: 1rem;
 			.home & {
 				font-size: 1.75rem;
 
@@ -128,7 +130,7 @@ p {
 
 		.page-servicios & {
 			font-family: 'Reenie Beanie';
-			font-size: 1.25rem;
+			font-size: 1.75rem;
 			@include breakpoint(medium) {
 				font-size: 1.75rem;
 			}
