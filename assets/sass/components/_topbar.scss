@@ -1,7 +1,11 @@
 $menu-link-color: $body-font-color;
 
+#masthead #main-menu .top-bar-right .active > a {
+    color: $menu-item-color-active;
+}
+
 #main-menu {
-	font-size: rem-calc(16);
+	font-size: $small-font-size;
 	.top-bar-left {
 		.menu > li > h1 > a {
 		    display: block;

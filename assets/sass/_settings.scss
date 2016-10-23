@@ -386,9 +386,9 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 0.7rem 1rem;
-$menu-item-color-active: $white;
-$menu-item-background-active: map-get($foundation-palette, secondary); //map-get($foundation-palette, primary);
+$menu-item-padding: 0.7rem .75rem;
+$menu-item-color-active: $green;
+$menu-item-background-active: $white; //map-get($foundation-palette, secondary); //map-get($foundation-palette, primary);
 $menu-icon-spacing: 0.25rem;
 
 // 23. Meter
@@ -542,12 +542,12 @@ $thumbnail-radius: $global-radius;
 // 34. Title Bar
 // -------------
 
-$titlebar-background: $black;
-$titlebar-color: $white;
+$titlebar-background: $white;
+$titlebar-color: $black;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
-$titlebar-icon-color-hover: $medium-gray;
+$titlebar-icon-color: $anchor-color;
+$titlebar-icon-color-hover: $anchor-color-hover;
 $titlebar-icon-spacing: 0.25rem;
 
 // 35. Tooltip

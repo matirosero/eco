@@ -36,6 +36,14 @@ add_action( 'after_setup_theme', function() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	//Image sizes
+    // add_image_size( 'eco-xlarge', 1200, 9999 ); // LARGE
+    add_image_size( 'eco-large', 1024, 9999 );
+    add_image_size( 'eco-medium', 860, 9999 );
+    add_image_size( 'eco-small', 700, 9999 );
+    add_image_size( 'eco-xsmall', 480, 9999 );
+    // add_image_size( 'eco-xxsmall', 320, 9999 ); // MEDIUM
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'eco' ),
