@@ -4,6 +4,13 @@ $menu-link-color: $body-font-color;
     color: $menu-item-color-active;
 }
 
+@media screen and (min-width: 40em) {
+	#masthead #main-menu .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a:after {
+	    right: 1rem;
+	}
+}
+
+
 #main-menu {
 	font-size: $small-font-size;
 	.top-bar-left {
