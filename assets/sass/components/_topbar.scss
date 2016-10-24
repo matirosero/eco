@@ -116,8 +116,22 @@ $menu-link-color: $body-font-color;
 		font-size: 13px;
 	}
 	#main-menu {
+		.top-bar-left {
+			.menu > li > h1 > a {
+			    line-height: rem-calc(40);
+			    margin-top: .35rem;
+			}
+		}
+		.top-bar-right {
+			> ul > li > a {
+				line-height: rem-calc(40);
+			}
+		}
 		.menu > li > a {
 			// padding: 0.7rem 0.25rem;
+		}
+		.top-bar-left .menu > li > h1 > a {
+			width: 55px;
 		}
 	}	
 }
