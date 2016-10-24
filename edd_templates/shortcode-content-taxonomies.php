@@ -3,30 +3,18 @@
  * Add Categories/Tags to [downloads] shortcode
  */
 
-$download_categories = get_the_term_list( // get the download categories
-	$post->ID,
-	'download_category',
-	'<span class="download-categories-title"></span>',
-	', ',
-	''
-);
-// $download_tags = get_the_term_list( // get the download tags
-// 	$post->ID,
-// 	'download_tag',
-// 	'<span class="download-categories-title"></span>',
-// 	', ',
-// 	''
-// );
+$terms = wp_get_object_terms( $post->ID, 'download_category' );
 
-if ( $download_categories || $download_tags ) {
+foreach( $terms as $term )
+    $term_names[] = '<span class="download-categories-title">'.$term->name.'</span>';
+
+$download_categories = implode( ', ', $term_names );
+
+
+if ( $download_categories ) {
 	?>
 	<div class="shop-download-terms">
 		<?php echo $download_categories ?>
 	</div>
-	<?php /*
-	<div class="shop-download-terms">
-		<?php echo $download_tags ?>
-	</div>
-	*/ ?>
 	<?php
 }

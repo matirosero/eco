@@ -25,6 +25,9 @@
 	@include breakpoint(medium) {
 		padding-bottom: 2rem;
 		margin-bottom: 2rem;
+		.edd_download_image {
+			margin-top: 7px;
+		}
 	}
 }
 
@@ -53,5 +56,8 @@
 	}
 	.button {
 		margin-bottom: 0;
+	}
+	@include breakpoint(small only) {
+		margin-top: 1rem;
 	}
 }
