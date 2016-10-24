@@ -9,10 +9,8 @@
 ?>
 
 <?php
-
 global $user_ID; // the ID of the currently logged-in user
 $download_id = get_the_ID(); // download ID
-
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -22,26 +20,48 @@ $download_id = get_the_ID(); // download ID
 		</header><!-- .entry-header -->
 	<?php endif; ?>
 
-	<div class="intro" role="main">
-		<div class="intro-container">
-			<p class="course-intro"><?php the_field('downloads_intro'); ?></p>
-		</div>
-	</div>
 
-	<div id="single-download-main" >
 
-		<?php do_action( 'foundationpress_post_before_entry_content' ); ?>
-		<div id="course-content" class="main-content">
-			<?php the_field('downloads_public'); ?>
 
-			<?php if( edd_has_user_purchased($user_ID, $download_id) ): ?>
-				<div class="section-divider">
-					<hr />
-				</div>
-				<?php the_content();
+	<section id="product-public" class="page-section">
+		<?php the_field('downloads_public'); ?>
+	</section><!-- #product-public -->
+
+	<?php if( edd_has_user_purchased($user_ID, $download_id) || current_user_can('administrator') ): ?>
+		<section id="product-private" class="page-section">
+			<?php the_field('downloads_private'); ?>
+
+			<?php
+			// check if the repeater field has rows of data
+			if( have_rows('downloads_modules') ):
+
+				echo '<ul class="accordion" data-accordion>';
+
+			 	// loop through the rows of data
+			    while ( have_rows('downloads_modules') ) : the_row(); ?>
+
+					<li class="accordion-item" data-accordion-item>
+						<a href="#" class="accordion-title"><?php the_sub_field('module_title'); ?></a>
+						<div class="accordion-content" data-tab-content>
+							 <?php the_sub_field('module_content'); ?>
+						</div>
+					</li>
+
+			    <?php endwhile;
+
+			    echo '</ul>';
+
 			endif; ?>
-		</div>
+			
 
+
+
+		</section><!-- #product-private -->
+	<?php endif; ?>
+
+
+
+<?php /*
 		<aside class="sidebar" data-sticky-container>
 			<div class="sticky" data-sticky data-anchor="course-content">
 				<div class="download-details">
@@ -93,23 +113,9 @@ $download_id = get_the_ID(); // download ID
 				</div>
 			</div>
 		</aside>
-	</div>
+*/ ?>
 
-	
-	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php 
-		if (is_page('Contactanos')) :
-			echo do_shortcode( '[contact-form-7 id="89" title="Contactanos"]' ); 
-		endif;
-		?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'eco' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+
 
 	<footer class="entry-footer">
 		<?php

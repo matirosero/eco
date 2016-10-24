@@ -136,6 +136,9 @@ function get_payment_ids( $download_id = '' ) {
  * @param string $content
  * @return string $display Output generated from the downloads queried
  */
+
+define('EDD_SLUG', 'productos');
+
 function eco_edd_downloads_query( $atts, $content = null ) {
 	$atts = shortcode_atts( array(
 		'show_category'    => 'no',

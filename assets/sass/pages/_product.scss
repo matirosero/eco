@@ -1,0 +1,39 @@
+#product-header {
+	background: $green;
+	color: $white;
+	.product-image {
+		background-size: cover;
+		background-position: center;
+	}
+}
+.product-header-container {
+	@include section-padding;
+	margin: 1rem 20px;
+	text-align: left;
+	
+	.page-title {
+		margin-bottom: 0;
+		text-align: left;
+	}
+	.page-subtitle {
+		@include button-text('normal');
+	}
+
+	.product-intro {
+		font-size: 1.25rem;
+	}
+
+	.product-buttons form {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	@include breakpoint(medium) {
+	}
+	@include breakpoint(xlarge) {
+		margin-top:0;
+		width: 90%;
+	}
+	@include breakpoint(xxlarge) {
+		width: 70%;
+	}
+}

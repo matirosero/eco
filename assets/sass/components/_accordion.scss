@@ -1,0 +1,8 @@
+.accordion-title {
+	@include button-text;
+	font-size: $small-font-size;
+	&:hover {
+		background-color: $orange;
+		color: $white;
+	}
+}
