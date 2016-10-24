@@ -18,9 +18,9 @@ get_header(); ?>
 
 <div class="expanded small-collapse row" data-equalizer data-equalize-on="medium" >
 
-	<div class="medium-8 large-9 xxlarge-10 columns">
+	<div class="medium-8 large-9 xxlarge-10 columns" data-equalizer-watch >
 
-		<div id="primary" class="content-area row<?php if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) { echo ' collapse'; } ?>" data-equalizer-watch >
+		<div id="primary" class="content-area row<?php if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) { echo ' collapse'; } ?>">
 
 			<?php
 			if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) : ?>

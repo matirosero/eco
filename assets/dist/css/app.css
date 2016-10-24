@@ -5693,6 +5693,9 @@ a.ofc-home {
       display: block;
       padding: .5rem .75rem .5rem 0;
       line-height: 1.4; }
+  /* line 73, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
+  #secondary .widget_facebook_likebox {
+    min-height: 580px; }
 
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_front-page.scss */
 .home-section {
