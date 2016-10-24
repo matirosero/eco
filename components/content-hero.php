@@ -79,17 +79,24 @@ if ( has_post_thumbnail( $post->ID ) ) :
 		<?php elseif ( is_page() ) : ?>
 			<!-- <div class="row"> -->
 				<!-- <div class="medium-5 medium-offset-1 columns"> -->
-					<div class="hero-text">
-						<?php
-						if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) :
-							echo '<h1 class="page-title">Sobre <em>nosotras</em></h1>';
-						else:
-							the_title( '<h1 class="page-title">', '</h1>' );
-						endif; ?>
-						<p class="page-subtitle"><?php the_field( 'page_subtitle' ); ?></p>
-					</div>
+			<div class="hero-text">
+				<?php
+				if ( is_page('Sobre nosotras') || is_page('Sobre ECO') ) :
+					echo '<h1 class="page-title">Sobre <em>nosotras</em></h1>';
+				else:
+					the_title( '<h1 class="page-title">', '</h1>' );
+				endif; ?>
+				<p class="page-subtitle"><?php the_field( 'page_subtitle' ); ?></p>
+			</div>
 				<!-- </div> --><!-- .columns -->
 			<!-- </div> --><!-- .row -->
+		<?php elseif ( is_singular('download') ) : ?>
+			<div class="hero-text">
+				<?php
+				the_title( '<h1 class="page-title">', '</h1>' );
+				?>
+				<p class="page-subtitle"><?php the_field( 'downloads_subtitle' ); ?></p>
+			</div>
 		<?php endif; ?>
 
 	</header><!-- #featured-hero -->
