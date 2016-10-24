@@ -5920,7 +5920,13 @@ a.ofc-home {
           top: 0; } }
     /* line 64, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page-services.scss */
     .service-list li:last-child {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      border: 0;
+      padding-bottom: 0; }
+
+/* line 73, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_page-services.scss */
+#services-request img {
+  margin-bottom: 1rem; }
 
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
 #product-header {

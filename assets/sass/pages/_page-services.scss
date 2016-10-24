@@ -63,6 +63,14 @@
 
 		&:last-child {
 			margin-bottom: 0;
+			border: 0;
+			padding-bottom: 0;
 		}
+	}
+}
+
+#services-request {
+	img {
+		margin-bottom: 1rem;
 	}
 }

@@ -54,8 +54,16 @@
 
 	</section><!-- #service-info -->
 
-	<section id="service-request-form" class="page-section">
+	<section id="services-request" class="page-section">
 
+				<?php
+				$image_services = get_field('services_image');
+				if( !empty($image_services) ):
+					echo wp_get_attachment_image( $image_services, 'full', false, array( 'class' => 'lazyload') );
+				endif;
+				?>
+
+		<a name="service-request-form"></a>
 		<h2><?php the_field('services_form_header'); ?></h2>
 
 		<?php the_field('services_form_text'); ?>
