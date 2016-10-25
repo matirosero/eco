@@ -5668,32 +5668,32 @@ a.ofc-home {
     /* line 36, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
     #secondary .widget_search form {
       padding: 0 20px; }
-  /* line 43, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
+  /* line 41, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
   #secondary .rpwwt-widget {
     margin: 0 1px 2rem; }
-    /* line 45, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
+    /* line 43, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
     #secondary .rpwwt-widget ul {
       padding: 0; }
-      /* line 47, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
+      /* line 45, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
       #secondary .rpwwt-widget ul li {
         margin: 0;
         border-bottom: 1px solid #e6e6e6;
         height: 75px; }
-        /* line 52, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
+        /* line 50, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
         #secondary .rpwwt-widget ul li:last-child {
           border-bottom: 0; }
-        /* line 56, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
+        /* line 54, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
         #secondary .rpwwt-widget ul li img {
           margin: 0 .75rem 0 0; }
-    /* line 62, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
+    /* line 60, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
     #secondary .rpwwt-widget a {
       display: block; }
-    /* line 66, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
+    /* line 64, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
     #secondary .rpwwt-widget .rpwwt-post-title {
       display: block;
       padding: .5rem .75rem .5rem 0;
       line-height: 1.4; }
-  /* line 73, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
+  /* line 71, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/sections/_sidebar.scss */
   #secondary .widget_facebook_likebox {
     min-height: 580px; }
 

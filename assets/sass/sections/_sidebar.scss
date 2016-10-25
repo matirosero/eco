@@ -7,7 +7,7 @@
 		padding: 1rem map-get($grid-column-gutter, small);
 		text-align: center;
 	}
-	
+
 #secondary {
 	background-color: $light-gray;
 	padding: 2rem 0;
@@ -37,8 +37,6 @@
 			padding: 0 map-get($grid-column-gutter, small);
 		}
 	}
-
-
 
 	.rpwwt-widget {
 		margin: 0 1px 2rem;
