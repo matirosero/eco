@@ -1,5 +1,12 @@
 <?php
 
+add_action( 'edd_register_account_fields_before' , 'eco_create_account_explanation' );
+function eco_create_account_explanation() {
+
+  // Echo the html
+  echo '<p>Es necesario crear una cuenta en nuestro sitio para poder acceder a los cursos.</p>';
+}
+
 remove_action( 'edd_after_download_content', 'edd_append_purchase_link' );
 
 
