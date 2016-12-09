@@ -84,6 +84,7 @@ if ( $purchases ) :
 											else:
 												_e( 'No downloadable files found.', 'eco' );
 											endif;
+											
 										endif; // End if payment complete
 
 									else : ?>
