@@ -78,7 +78,6 @@ if ( $purchases ) :
 										else :
 											$download_id = $download['id'];
 											$checked = (boolean) get_post_meta( $download_id, '_edd_das_enabled', true );
-											var_dump($checked);
 											if ($checked == TRUE) :
 												_e( 'You can find course materials on the course page', 'eco' );
 											else:
