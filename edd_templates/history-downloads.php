@@ -16,9 +16,9 @@ if ( $purchases ) :
 			<thead>
 				<tr class="edd_download_history_row">
 					<?php do_action( 'edd_download_history_header_start' ); ?>
-					<th class="edd_download_download_name"><?php _e( 'Download Name', 'easy-digital-downloads' ); ?></th>
+					<th class="edd_download_download_name"><?php _e( 'Download Name', 'eco' ); ?></th>
 					<?php if ( ! edd_no_redownload() ) : ?>
-						<th class="edd_download_download_files"><?php _e( 'Files', 'easy-digital-downloads' ); ?></th>
+						<th class="edd_download_download_files"><?php _e( 'Files', 'eco' ); ?></th>
 					<?php endif; //End if no redownload?>
 					<?php do_action( 'edd_download_history_header_end' ); ?>
 				</tr>
@@ -76,12 +76,12 @@ if ( $purchases ) :
 											endforeach;
 
 										else :
-											_e( 'No downloadable files found.', 'easy-digital-downloads' );
+											_e( 'No downloadable files found.', 'eco' );
 										endif; // End if payment complete
 
 									else : ?>
 										<span class="edd_download_payment_status">
-											<?php printf( __( 'Payment status is %s', 'easy-digital-downloads' ), edd_get_payment_status( $payment, true) ); ?>
+											<?php printf( __( 'Payment status is %s', 'eco' ), edd_get_payment_status( $payment, true) ); ?>
 										</span>
 										<?php
 									endif; // End if $download_files
@@ -112,5 +112,5 @@ if ( $purchases ) :
 	</section><!-- #purchase-history -->
 	<?php do_action( 'edd_after_download_history' ); ?>
 <?php else : ?>
-	<p class="edd-no-downloads"><?php _e( 'You have not purchased any downloads', 'easy-digital-downloads' ); ?></p>
+	<p class="edd-no-downloads"><?php _e( 'You have not purchased any downloads', 'eco' ); ?></p>
 <?php endif; ?>
