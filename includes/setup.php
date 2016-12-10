@@ -79,6 +79,12 @@ add_action( 'after_setup_theme', function() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Remove status bar for all users except admins
+	if (!current_user_can('administrator') && !is_admin()) {
+	  show_admin_bar(false);
+	}
+
 } );
 
 /**
