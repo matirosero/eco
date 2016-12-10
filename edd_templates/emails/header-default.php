@@ -81,7 +81,7 @@ $heading    = EDD()->emails->get_heading();
 					<table border="0" cellpadding="0" cellspacing="0" width="520" id="template_container" style="<?php echo $template_container; ?>">
 						<tr>
 							<td>
-								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/email-header.jpg" alt="ECO Acompa&ntilde;amiento Empresarial" />
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/dist/img/email-header.jpg" alt="ECO Acompa&ntilde;amiento Empresarial" />
 							</td>
 						</tr>
 						<?php if ( ! empty ( $heading ) ) : ?>
