@@ -7,6 +7,8 @@ var	gulp			= require('gulp'),
 	svgSprite		= require('gulp-svg-sprite'),
 	svgmin 			= require('gulp-svgmin'),
 	size			= require('gulp-size'),
+	imagemin 		= require('gulp-imagemin'), //MRo
+	cache 			= require('gulp-cache'), //MRo
 	browserSync		= require('browser-sync'), // Sends php, js, and css updates to browser for us
 	concat			= require('gulp-concat'), // Concat our js
 	uglify			= require('gulp-uglify'),
@@ -79,6 +81,20 @@ gulp.task('svg-sprite', ['svg-min'], function() {
     .pipe(gulp.dest(paths.destPath))
 		.pipe(browserSync.reload({stream:true}))
 		.pipe(notify({ message: "SVG Sprite task complete"}));
+});
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Optimize Images Task (MRo)
+////////////////////////////////////////////////////////////////////////////////
+
+gulp.task('optimize-images', function(){
+  return gulp.src(paths.imgPath + 'raster/**/*.+(png|jpg|gif)')
+  // Caching images that ran through imagemin
+  .pipe(cache(imagemin({
+      interlaced: true
+    })))
+  .pipe(gulp.dest(paths.destPath + 'img'))
 });
 
 
@@ -211,9 +227,10 @@ gulp.task('watch', function() {
 	gulp.watch(paths.sassPath + '**/*.scss', ['styles']);
 	gulp.watch(paths.jsPath + '**/*.js', ['js']);
 	gulp.watch(paths.imgPath + 'svg/**/*.svg', ['svg-sprite']);
+	gulp.watch(paths.imgPath + 'raster/**/*.+(png|jpg|gif)', ['optimize-images']);
 });
 
 
 // Our default gulp task, which runs all of our tasks upon typing in 'gulp' in Terminal
-gulp.task('default', ['styles', 'js', 'svg-sprite']);
-gulp.task('serve', ['svg-sprite', 'styles', 'js', 'browser-sync', 'foundation-js', 'watch']);
+gulp.task('default', ['styles', 'js', 'svg-sprite', 'optimize-images']);
+gulp.task('serve', ['svg-sprite', 'optimize-images', 'styles', 'js', 'browser-sync', 'foundation-js', 'watch']);
