@@ -21,6 +21,11 @@
 
 <body <?php body_class(); ?>>
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMZX9TN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <?php echo file_get_contents( get_template_directory() . '/assets/dist/sprite/sprite.svg' ); ?>
 
 <header id="masthead" class="" role="banner">
