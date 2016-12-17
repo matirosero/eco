@@ -32,7 +32,10 @@ endif; ?>
 			<?php if(function_exists('edd_price')) { ?>
 				<div class="product-buttons">
 					<?php if(!edd_has_variable_prices(get_the_ID())) { ?>
-						<?php echo edd_get_purchase_link(get_the_ID(), 'Add to Cart', 'button'); ?>
+						<?php 
+						edd_get_template_part( 'shortcode', 'content-price' );
+						echo edd_get_purchase_link(get_the_ID(), 'Add to Cart', 'button'); 
+						?>
 					<?php } ?>
 
 				</div><!--end .product-buttons-->
