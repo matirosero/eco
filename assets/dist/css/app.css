@@ -5984,14 +5984,17 @@ a.ofc-home {
     margin-top: .25rem;
     margin-bottom: 0;
     padding-bottom: 0; }
+  /* line 58, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
+  .buy-box .button, .buy-box .comment-reply-link {
+    margin-bottom: 0; }
 
-/* line 59, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
+/* line 62, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
 .buy-box-title {
   font-family: QuickSand, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   text-transform: uppercase;
   margin-bottom: 0; }
 
-/* line 65, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
+/* line 68, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
 .discount-price {
   font-family: QuickSand, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   text-transform: uppercase;
