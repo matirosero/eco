@@ -33,12 +33,27 @@ endif; ?>
 				<p class="product-intro"><?php the_field('downloads_intro'); ?></p>
 			</div><!--end .product-header-info-->
 			<div class="medium-4 columns">
-				<div class="buy-box">
+				<?php
+				$buyboxclass = "buy-box";
+				if ( get_field('downloads_dicount_price') ):
+					$buyboxclass .= " has-discount";
+				endif;
+				?>
+				<div class="<?php echo $buyboxclass; ?>">
 					<?php if(function_exists('edd_price')) { ?>
-						<?php if(!edd_has_variable_prices(get_the_ID())) { ?>
-							<?php 
+						<?php if(!edd_has_variable_prices(get_the_ID())) {
+							echo '<p class="buy-box-title">Precio</p>';
 							edd_get_template_part( 'shortcode', 'content-price' );
-							echo edd_get_purchase_link(get_the_ID(), 'Add to Cart', 'button'); 
+
+							if ( get_field('downloads_dicount_price') ):
+
+								echo '<span class="discount-price">';
+								the_field('downloads_dicount_price');
+								echo '</span>';
+								echo '<p class="buy-box-notes">'.get_field('downloads_buybox_text').'</p>';
+							endif;
+
+							echo edd_get_purchase_link(get_the_ID(), 'Add to Cart', 'button');
 							?>
 						<?php } ?>
 					<?php } ?>
@@ -46,7 +61,7 @@ endif; ?>
 			</div><!--end .columns-->
 
 
-			
+
 
 
 		</div>

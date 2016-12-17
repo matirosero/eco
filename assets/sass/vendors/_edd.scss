@@ -17,9 +17,10 @@
 }
 
 .edd_price {
-	font-family: $header-font-family;
-	text-transform: uppercase;
-	font-size: 2.25rem;
+	@include product-price;
+	.has-discount & {
+		text-decoration: line-through;
+	}
 }
 
 // .edd-payment-icons:before
