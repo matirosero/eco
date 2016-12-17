@@ -56,6 +56,7 @@ p {
 
 .page-title {
 	text-align: center;
+	line-height: 1.15;
 	.entry-header &,
 	.page-header & {
 		margin: 1rem 0 2rem;
@@ -120,12 +121,17 @@ p {
 				}
 			}
 		}
+
+		.single-download & {
+			font-size: 2.25rem;
+		}
 	}
 
 }
 
 .page-subtitle {
-	
+	line-height: 1.15;
+	margin-top: 1rem;
 	#featured-hero & {
 		color: $white;
 		@include hero-text-shadow;

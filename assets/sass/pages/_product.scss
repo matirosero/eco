@@ -31,9 +31,19 @@
 	}
 	@include breakpoint(xlarge) {
 		margin-top:0;
-		width: 90%;
+		// width: 90%;
 	}
 	@include breakpoint(xxlarge) {
-		width: 70%;
+		// width: 70%;
+	}
+}
+
+.buy-box {
+	border: 1px solid scale-color($green, $lightness: 8%);
+	padding: .5rem 1rem;
+	text-align: center;
+	form {
+		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 }

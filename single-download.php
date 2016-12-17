@@ -17,29 +17,38 @@ if ( has_post_thumbnail( $post->ID ) ) :
 endif; ?>
 
 <header id="product-header" class="expanded row collapse" role="banner" data-equalizer data-equalize-on="medium" >
-	<div id="" class="product-image medium-4 columns" style="background-image: url('<?php echo $default_image ?>')" data-equalizer-watch >
+	<div id="" class="product-image large-4 columns" style="background-image: url('<?php echo $default_image ?>')" data-equalizer-watch >
 
 	</div>
-	<div class="medium-8 columns" data-equalizer-watch >
-		<div class="product-header-container">
-			<?php
-			the_title( '<h1 class="page-title">', '</h1>' );
-			?>
-			<p class="page-subtitle"><?php the_field( 'downloads_subtitle' ); ?></p>
+	<div class="large-8 columns" data-equalizer-watch >
+		<div class="product-header-container row">
 
-			<p class="product-intro"><?php the_field('downloads_intro'); ?></p>
 
-			<?php if(function_exists('edd_price')) { ?>
-				<div class="product-buttons">
-					<?php if(!edd_has_variable_prices(get_the_ID())) { ?>
-						<?php 
-						edd_get_template_part( 'shortcode', 'content-price' );
-						echo edd_get_purchase_link(get_the_ID(), 'Add to Cart', 'button'); 
-						?>
+
+			<div class="product-header-info medium-8 columns">
+				<?php
+				the_title( '<h1 class="page-title">', '</h1>' );
+				?>
+				<p class="page-subtitle"><?php the_field( 'downloads_subtitle' ); ?></p>
+				<p class="product-intro"><?php the_field('downloads_intro'); ?></p>
+			</div><!--end .product-header-info-->
+			<div class="medium-4 columns">
+				<div class="buy-box">
+					<?php if(function_exists('edd_price')) { ?>
+						<?php if(!edd_has_variable_prices(get_the_ID())) { ?>
+							<?php 
+							edd_get_template_part( 'shortcode', 'content-price' );
+							echo edd_get_purchase_link(get_the_ID(), 'Add to Cart', 'button'); 
+							?>
+						<?php } ?>
 					<?php } ?>
+				</div><!--end .buy-box-->
+			</div><!--end .columns-->
 
-				</div><!--end .product-buttons-->
-			<?php } ?>
+
+			
+
+
 		</div>
 	</div>
 </header><!-- #product-header -->
