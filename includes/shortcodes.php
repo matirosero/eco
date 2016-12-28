@@ -34,18 +34,19 @@ function recent_posts_function($atts) {
 
 function mailchimp_form_for_download($equalizer=false) {
    	$form = do_shortcode('[mc4wp_form id="44"]');
-   	$form = str_replace('Inscribite', 'Recibí ebook gratuito', $form);
+   	$form = str_replace('Inscribite', 'Recibí guía gratuita', $form);
 
    	if ($equalizer) :
    		$equalize = ' data-equalizer-watch';
    	endif;
 
-	$mailchimp = '<div class="free-download-form">
-		<div class="free-download-container"'.$equalize.'>
+	$mailchimp = '<div class="free-download-form"'.$equalize.'>
+		<div class="free-download-container">
 			<h2>Gratis</h2>
-			<p>Al suscribirte a nuestra lista de correo</p>'
+			<p>Ingresa tus datos para obtener la guía.</p>'
 			.$form
-		.'</div>
+		.'<p class="fineprint">Quedarás inscrito en nuestra lista. Revisá tu correo electrónico para descargarla. Te recomendamos que revisés el spam y agregués <a href="mailto:info@soyempresarioeco.com">info@soyempresarioeco.com</a> a tu lista de contactos.</p>
+		</div>
 	</div>';
 
 	return $mailchimp;
@@ -70,9 +71,9 @@ function free_download_function($atts) {
 
 		$return_string .= '<div class="row" data-equalizer data-equalize-on="medium">
 			<div class="medium-7 medium-push-5 large-8 large-push-4 columns">
-				<div class="free-download-info">
-					<div class="free-download-container" data-equalizer-watch>
-						<h2>E-book gratuito
+				<div class="free-download-info" data-equalizer-watch>
+					<div class="free-download-container">
+						<h2>Guía gratuita
 						<span class="subtitle">Primeros pasos - Creando tu propio negocio</span></h2>
 
 						<p class="intro">¿Tenés una excelente idea y no sabés cómo llevarla a buen puerto? Aprendé los primeros pasos que debés dar para iniciar tu propio negocio.</p>
@@ -95,7 +96,7 @@ function free_download_function($atts) {
 
 	else :
 		$return_string .= '<h2 class="free-download-title">
-			E-book gratuito
+			Guía gratuita
 			<span class="subtitle">Primeros pasos - Creando tu propio negocio</span>
 		</h2>';
 		$return_string .= mailchimp_form_for_download();

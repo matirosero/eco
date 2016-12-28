@@ -25,12 +25,13 @@
 
 .free-download-form {
 	// max-width: rem-calc(356px);
-	background-image: url(../../img/ebook-bg.jpg);
-	background-position: 0 100%;
+	background-image: url(../img/ebook-bg-small.jpg);
+	background-position-y: 100%;
+	background-position-x: center;
 	background-size: cover;
 	text-align: center;
 	position: relative;
-	@include responsive-padding($vpadding: 2rem);
+	@include responsive-padding($vpadding: 2rem 1rem);
 
 	h2,
 	p {
@@ -41,12 +42,19 @@
 		color: $green;
 		font-size: 3rem;
 		font-weight: bold;
-
+		line-height: 1;
 	}
 
-	p {
+	p:not(.fineprint) {
 		@include button-text;
 		line-height: 1.25;
+	}
+
+	.fineprint {
+		font-size: $small-font-size;
+		line-height: 1.25;
+		margin-bottom: 2rem;
+		// background: $white;
 	}
 
 	form {
@@ -67,6 +75,20 @@
 		.free-download-container {
 		  display: table-cell;
 		  vertical-align: middle;
+		}
+	}
+
+	@include breakpoint(medium) {
+		background-image: url(../img/ebook-bg.jpg);
+		background-position-y: 0;
+		h2 {
+			color: $green;
+			font-size: 3rem;
+			font-weight: bold;
+			margin-top:70px;
+		}
+		.fineprint {
+			margin-bottom: 0;
 		}
 	}
 }
