@@ -16,10 +16,24 @@
 		margin-bottom: 0;
 	}
 
+	.edd_download_image {
+		display: block;
+		background-color: $black;
+		position:relative;
+		a {
+			display: block;
+			opacity:.5;
+			@include hover {
+				opacity:1;
+			}
+		}
+	}
+
 	@include breakpoint(small only) {
 		.edd_download_image {
 			margin-bottom: 1.5rem;
 			text-align: center;
+
 		}
 	}
 	@include breakpoint(medium) {
@@ -39,6 +53,10 @@
 	+ .shop-item-subtitle {
 		font-size: 1rem;
 	}
+}
+
+.edd_download_excerpt {
+	margin-bottom: 1rem;
 }
 
 .shop-item-footer {
