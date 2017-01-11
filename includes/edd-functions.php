@@ -389,7 +389,7 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 
 			<?php while ( $downloads->have_posts() ) : $downloads->the_post(); ?>
 				<?php $schema = edd_add_schema_microdata() ? 'itemscope itemtype="http://schema.org/Product" ' : ''; ?>
-				
+
 				<li <?php echo $schema; ?>class="row shop-item <?php echo apply_filters( 'edd_download_class', 'edd_download', get_the_ID(), $atts, $i ); ?>" id="edd_download_<?php echo get_the_ID(); ?>">
 
 				<!-- <div <?php echo $schema; ?>class="<?php echo apply_filters( 'edd_download_class', 'edd_download', get_the_ID(), $atts, $i ); ?>" id="edd_download_<?php echo get_the_ID(); ?>"> -->
@@ -400,13 +400,20 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 						do_action( 'edd_download_before' );
 
 						if ( 'false' != $atts['thumbnails'] ) :
-							echo '<div class="medium-2 columns">';
+							echo '<div class="medium-4 columns">';
 								edd_get_template_part( 'shortcode', 'content-image' );
 								do_action( 'edd_download_after_thumbnail' );
+
+							if ( $atts['show_category'] == 'yes' ) {
+								edd_get_template_part( 'shortcode', 'content-taxonomies' );
+								// do_action( 'edd_download_after_taxonomies' );
+							}
 							echo '</div>';
 						endif;
 
-						echo '<div class="medium-6 large-7 columns">';
+						echo '<div class="medium-8 columns">';
+
+
 							edd_get_template_part( 'shortcode', 'content-title' );
 							echo '<h4 class="shop-item-subtitle">'.get_field('downloads_subtitle').'</h4>';
 							do_action( 'edd_download_after_title' );
@@ -418,29 +425,16 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 								edd_get_template_part( 'shortcode', 'content-full' );
 								do_action( 'edd_download_after_content' );
 							}
+							echo '<a class="button" itemprop="url" href="'.get_permalink().'">Más información</a>';
 						echo '</div>';
 
-						echo '<footer class="shop-item-footer medium-4 large-3 columns">';
-							
-							if ( $atts['show_category'] == 'yes' ) {
-								edd_get_template_part( 'shortcode', 'content-taxonomies' );
-								// do_action( 'edd_download_after_taxonomies' );
-							}
-
-							if ( $atts['price'] == 'yes' ) {
-								edd_get_template_part( 'shortcode', 'content-price' );
-								do_action( 'edd_download_after_price' );
-							}
-
-							if ( $atts['buy_button'] == 'yes' )
-								edd_get_template_part( 'shortcode', 'content-cart-button' );
-						echo '</footer>';
+						
 
 						do_action( 'edd_download_after' );
 
 						?>
 					<!-- </div> --><!-- .edd_download_inner -->
-				
+
 				</li><!-- .row .shop-item .edd_download -->
 				<!-- </div> -->
 
@@ -486,7 +480,7 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 
 		</ul><!-- .shop-list -->
 		<!-- </div> -->
-		
+
 		<?php
 		$display = ob_get_clean();
 	else:
