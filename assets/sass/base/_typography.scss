@@ -61,13 +61,16 @@ p {
 	.page-header & {
 		margin: 1rem 0 2rem;
 	}
-	
 
 	em {
 		font-style: normal;
 		font-family: 'Reenie Beanie';
 		text-transform: none;
 		font-size: 1.25em;
+	}
+
+	& + .taxonomy-description {
+		margin-bottom: 2rem;
 	}
 
 	#featured-hero & {
@@ -95,7 +98,7 @@ p {
 
 	@include breakpoint(medium) {
 		font-size: 2rem;
-		
+
 		#featured-hero & {
 			margin-bottom: 1rem;
 			.home & {
