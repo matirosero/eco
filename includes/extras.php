@@ -221,7 +221,7 @@ function eco_author_info_box( $content ) {
 
 			$author_details .= '<p class="author-details">' . nl2br( $user_description ). '</p>';
 
-		$author_details .= '<p class="author-links"><a href="'. $user_posts .'">Ver todos los artículos de ' . $display_name . '</a>';
+		// $author_details .= '<p class="author-links"><a href="'. $user_posts .'">Ver todos los artículos de ' . $display_name . '</a>';
 
 		// Check if author has a website in their profile
 		if ( ! empty( $user_website ) ) {
