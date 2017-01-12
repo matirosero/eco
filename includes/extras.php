@@ -44,7 +44,7 @@ add_filter( 'embed_oembed_html', 'eco_oembed_flex_wrapper', 10, 4 );
 add_filter( 'wp_nav_menu_items', 'my_wp_nav_menu_items', 10, 2 );
 
 function my_wp_nav_menu_items( $items, $args, $ajax = false ) {
-	
+
 	//Utility Bar
 	if ( ( isset( $ajax ) && $ajax ) || ( property_exists( $args, 'theme_location' ) && ( $args->theme_location === 'utility' || $args->theme_location === 'mobile-nav' ) ) ) {
 
@@ -61,7 +61,7 @@ function my_wp_nav_menu_items( $items, $args, $ajax = false ) {
 					</li>';
 
 				$items .= $login;
-			}						
+			}
 
 			// if ( edd_get_cart_quantity() != 0 ) {
 
@@ -123,7 +123,7 @@ function my_wp_nav_menu_items( $items, $args, $ajax = false ) {
 }
 
 /**
- * Modify Excerpt: change [...] tp Read More 
+ * Modify Excerpt: change [...] tp Read More
  */
 function new_excerpt_more( $more ) {
 	return '... </p><p><a class="button read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'eco') . ' <i class="fa fa-arrow-right" aria-hidden="true"></i></a>';
@@ -132,7 +132,7 @@ add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 
 /**
- * For debugging https://www.smashingmagazine.com/2011/03/ten-things-every-wordpress-plugin-developer-should-know/ 
+ * For debugging https://www.smashingmagazine.com/2011/03/ten-things-every-wordpress-plugin-developer-should-know/
  */
 function log_me($message) {
     if (WP_DEBUG === true) {
@@ -182,3 +182,66 @@ function sumobi_edd_quantity_updated_js() {
 </script>
 <?php }
 add_action( 'wp_footer', 'sumobi_edd_quantity_updated_js' );
+
+
+
+/**
+ * Add author to blog post
+ */
+function eco_author_info_box( $content ) {
+
+	global $post;
+
+	// Detect if it is a single post with a post author
+	if ( is_single() && isset( $post->post_author ) ) {
+
+		// Get author's display name
+		$display_name = get_the_author_meta( 'display_name', $post->post_author );
+
+		// If display name is not available then use nickname as display name
+		if ( empty( $display_name ) )
+			$display_name = get_the_author_meta( 'nickname', $post->post_author );
+
+		// Get author's biographical information or description
+		$user_description = get_the_author_meta( 'user_description', $post->post_author );
+
+		// Get author's website URL
+		$user_website = get_the_author_meta('url', $post->post_author);
+
+		// Get link to the author archive page
+		$user_posts = get_author_posts_url( get_the_author_meta( 'ID' , $post->post_author));
+
+		if ( ! empty( $display_name ) )
+			$author_details = '<h3 class="author-name">Sobre <strong>' . $display_name . '</strong></h3>';
+
+		$author_details .= '<div class="author-avatar">' . get_avatar( get_the_author_meta('user_email') , 100 ) . '</div>';
+
+		if ( ! empty( $user_description ) )
+		// Author avatar and bio
+
+			$author_details .= '<p class="author-details">' . nl2br( $user_description ). '</p>';
+
+		$author_details .= '<p class="author-links"><a href="'. $user_posts .'">Ver todos los artículos de ' . $display_name . '</a>';
+
+		// Check if author has a website in their profile
+		if ( ! empty( $user_website ) ) {
+
+			// Display author website link
+			$author_details .= ' | <a href="' . $user_website .'" target="_blank" rel="nofollow">Website</a></p>';
+
+		} else {
+			// if there is no author website then just close the paragraph
+			$author_details .= '</p>';
+		}
+
+		// Pass all this info to post content
+		$content = $content . '<footer class="author-bio" >' . $author_details . '</footer>';
+	}
+	return $content;
+}
+
+// Add our function to the post content filter
+add_action( 'the_content', 'eco_author_info_box' );
+
+// Allow HTML in author bio section
+remove_filter('pre_user_description', 'wp_filter_kses');

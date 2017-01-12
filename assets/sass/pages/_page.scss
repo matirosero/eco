@@ -105,3 +105,29 @@
 	text-align: center;
 }
 
+.author-bio {
+	background: $light-gray;
+	// border: 1px solid $light-gray;
+	margin: 2rem 0;
+	padding: 1rem;
+
+	.author-name {
+		font-size: 1rem;
+		// font-weight: bold;
+	}
+
+	.author-avatar {
+		float: left;
+		margin: .5rem 1rem 1rem 0;
+		@include breakpoint(small only) {
+			width: 90px;
+			margin-bottom: .5rem;
+		}
+	}
+
+	.author-links {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
