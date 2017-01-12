@@ -21,15 +21,22 @@ endif; ?>
 
 	</div>
 	<div class="large-8 columns" data-equalizer-watch >
-		<div class="product-header-container">
+		<div class="product-header-container row">
 
-			<div class="product-header-info">
+
+
+			<div class="product-header-info large-12 xlarge-10 xxlarge-8 columns end">
 				<?php
 				the_title( '<h1 class="page-title">', '</h1>' );
 				?>
 				<p class="page-subtitle"><?php the_field( 'downloads_subtitle' ); ?></p>
 				<p class="product-intro"><?php the_field('downloads_intro'); ?></p>
 			</div><!--end .product-header-info-->
+
+
+
+
+
 
 		</div>
 	</div>
