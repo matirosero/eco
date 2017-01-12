@@ -21,48 +21,15 @@ endif; ?>
 
 	</div>
 	<div class="large-8 columns" data-equalizer-watch >
-		<div class="product-header-container row">
+		<div class="product-header-container">
 
-
-
-			<div class="product-header-info medium-8 columns">
+			<div class="product-header-info">
 				<?php
 				the_title( '<h1 class="page-title">', '</h1>' );
 				?>
 				<p class="page-subtitle"><?php the_field( 'downloads_subtitle' ); ?></p>
 				<p class="product-intro"><?php the_field('downloads_intro'); ?></p>
 			</div><!--end .product-header-info-->
-			<div class="medium-4 columns">
-				<?php
-				$buyboxclass = "buy-box";
-				if ( get_field('downloads_dicount_price') ):
-					$buyboxclass .= " has-discount";
-				endif;
-				?>
-				<div class="<?php echo $buyboxclass; ?>">
-					<?php if(function_exists('edd_price')) { ?>
-						<?php if(!edd_has_variable_prices(get_the_ID())) {
-							echo '<p class="buy-box-title">Precio</p>';
-							edd_get_template_part( 'shortcode', 'content-price' );
-
-							if ( get_field('downloads_dicount_price') ):
-
-								echo '<span class="discount-price">';
-								the_field('downloads_dicount_price');
-								echo '</span>';
-								echo '<p class="buy-box-notes">'.get_field('downloads_buybox_text').'</p>';
-							endif;
-
-							echo edd_get_purchase_link(get_the_ID(), 'Add to Cart', 'button');
-							?>
-						<?php } ?>
-					<?php } ?>
-				</div><!--end .buy-box-->
-			</div><!--end .columns-->
-
-
-
-
 
 		</div>
 	</div>

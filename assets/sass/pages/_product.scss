@@ -46,9 +46,12 @@
 }
 
 .buy-box {
-	background: scale-color($green, $lightness: -15%);
+	background: $green;
+	color: $white;
+	display: inline-block;
 	// border: 1px solid scale-color($green, $lightness: 8%);
 	padding: 1rem 1rem .5rem;
+	margin-top: 1rem;
 	text-align: center;
 	.edd_download_purchase_form {
 		margin-top:.25rem;
@@ -57,6 +60,11 @@
 	}
 	.button {
 		margin-bottom: 0;
+	}
+}
+.buy-box-price {
+	.edd_price {
+		line-height: 1;
 	}
 }
 .buy-box-title {

@@ -25,6 +25,44 @@ $download_id = get_the_ID(); // download ID
 
 	<section id="product-public" class="page-section">
 		<?php the_field('downloads_public'); ?>
+
+
+
+
+				<?php
+				$buyboxclass = "buy-box";
+				if ( get_field('downloads_dicount_price') ):
+					$buyboxclass .= " has-discount row";
+				endif;
+				?>
+				<div class="<?php echo $buyboxclass; ?>">
+					<?php if(function_exists('edd_price')) { ?>
+						<?php if(!edd_has_variable_prices(get_the_ID())) {
+							echo '<div class="buy-box-price small-6 columns">';
+							echo '<p class="buy-box-title">Precio</p>';
+							edd_get_template_part( 'shortcode', 'content-price' );
+							echo '</div>';
+
+							echo '<div class="buy-box-button small-6 columns">';
+
+							if ( get_field('downloads_dicount_price') ):
+
+								echo '<span class="discount-price">';
+								the_field('downloads_dicount_price');
+								echo '</span>';
+								echo '<p class="buy-box-notes">'.get_field('downloads_buybox_text').'</p>';
+							endif;
+
+							echo edd_get_purchase_link(get_the_ID(), 'Add to Cart', 'button');
+							echo '</div>';
+							?>
+						<?php } ?>
+					<?php } ?>
+				</div><!--end .buy-box-->
+
+
+
+
 	</section><!-- #product-public -->
 
 	<?php if( edd_has_user_purchased($user_ID, $download_id) || current_user_can('administrator') ): ?>

@@ -6033,25 +6033,32 @@ a.ofc-home {
 
 /* line 48, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
 .buy-box {
-  background: #04958c;
+  background: #05AFA5;
+  color: #fefefe;
+  display: inline-block;
   padding: 1rem 1rem .5rem;
+  margin-top: 1rem;
   text-align: center; }
-  /* line 53, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
+  /* line 56, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
   .buy-box .edd_download_purchase_form {
     margin-top: .25rem;
     margin-bottom: 0;
     padding-bottom: 0; }
-  /* line 58, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
+  /* line 61, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
   .buy-box .button, .buy-box .comment-reply-link {
     margin-bottom: 0; }
 
-/* line 62, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
+/* line 66, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
+.buy-box-price .edd_price {
+  line-height: 1; }
+
+/* line 70, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
 .buy-box-title {
   font-family: QuickSand, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   text-transform: uppercase;
   margin-bottom: 0; }
 
-/* line 68, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
+/* line 76, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/pages/_product.scss */
 .discount-price {
   font-family: QuickSand, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   text-transform: uppercase;
