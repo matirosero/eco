@@ -400,15 +400,13 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 						do_action( 'edd_download_before' );
 
 						if ( 'false' != $atts['thumbnails'] ) :
-							echo '<div class="medium-4 columns">';
-								edd_get_template_part( 'shortcode', 'content-image' );
-								do_action( 'edd_download_after_thumbnail' );
+							echo '<div class="medium-4 columns">
+								<div class="shop-item-image">';
+									edd_get_template_part( 'shortcode', 'content-image' );
+									do_action( 'edd_download_after_thumbnail' );
 
-							if ( $atts['show_category'] == 'yes' ) {
-								edd_get_template_part( 'shortcode', 'content-taxonomies' );
-								// do_action( 'edd_download_after_taxonomies' );
-							}
-							echo '</div>';
+							echo '</div>
+							</div>';
 						endif;
 
 						echo '<div class="medium-8 columns">';
@@ -491,3 +489,17 @@ function eco_edd_downloads_query( $atts, $content = null ) {
 }
 add_shortcode( 'eco_downloads', 'eco_edd_downloads_query' );
 
+
+
+
+//Add type to edd image
+add_action( 'edd_download_after_thumbnail', 'eco_edd_type_on_thumbnail' );
+
+function eco_edd_type_on_thumbnail () {
+
+	// if ( $atts['show_category'] == 'yes' ) {
+		edd_get_template_part( 'shortcode', 'content-taxonomies' );
+		// do_action( 'edd_download_after_taxonomies' );
+	// }
+
+}

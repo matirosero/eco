@@ -44,7 +44,26 @@
 		}
 	}
 }
+.shop-item-image {
+	position: relative;
+}
+.shop-download-terms {
 
+	font-family: $header-font-family;
+	text-transform: uppercase;
+	font-weight: bold;
+	.shop-item-image & {
+		background: $orange;
+		color: $white;
+		padding: .15rem .5rem;
+		position: absolute;
+		top: 0;
+		left: 0;
+		// transform: translate(-50%, 0%);
+		text-align: center;
+		font-size: $small-font-size;
+	}
+}
 .shop-item-title {
 	margin: 0;
 	font-size: rem-calc(24px);
