@@ -53,7 +53,7 @@
 	text-transform: uppercase;
 	font-weight: bold;
 	.shop-item-image & {
-		background: $orange;
+		background: rgba($orange, .85);
 		color: $white;
 		padding: .15rem .5rem;
 		position: absolute;
