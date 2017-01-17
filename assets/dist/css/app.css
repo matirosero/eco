@@ -5846,8 +5846,9 @@ a.ofc-home {
   /* line 10, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_mailchimp.scss */
   .mc4wp-form input[type='text'], .mc4wp-form input[type='password'], .mc4wp-form input[type='email'] {
     display: inline-block;
+    margin-right: .5rem;
     width: 47%; }
-  /* line 18, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_mailchimp.scss */
+  /* line 19, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_mailchimp.scss */
   #featured-hero .mc4wp-form .newsletter-signup,
   #featured-hero .mc4wp-form input[type="submit"],
   #featured-hero .mc4wp-form input[type="button"],
