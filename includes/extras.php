@@ -192,6 +192,7 @@ function eco_author_info_box( $content ) {
 
 	global $post;
 
+
 	// Detect if it is a single post with a post author
 	if ( is_single() && isset( $post->post_author ) ) {
 
@@ -237,6 +238,13 @@ function eco_author_info_box( $content ) {
 		// Pass all this info to post content
 		$content = $content . '<footer class="author-bio" >' . $author_details . '</footer>';
 	}
+	$form = '<div class="general-signup">
+		<p>Ingresá tus datos y comenzá a crear tu propio negocio YA! Recibirás gratis nuestro E-Book PRIMEROS PASOS.</p>'
+		.do_shortcode('[mc4wp_form]')
+		.'</div>';
+
+	$content .= $form;
+
 	return $content;
 }
 

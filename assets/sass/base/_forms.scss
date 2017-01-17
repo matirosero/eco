@@ -41,22 +41,7 @@ label {
 	// font-size: $small-font-size;
 }
 
-.mc4wp-form {
-	input[type='text'], input[type='password'], input[type='email'] {
-		display: inline-block;
-		width: 47%;
-	}
 
-	#featured-hero & {
-		padding-bottom: 0;
-
-		.newsletter-signup,
-		input[type="submit"], input[type="button"] {
-			margin-bottom: 0;
-		}
-		input[type="submit"], input[type="button"] {}
-	}
-}
 
 .comment-subscription-form {
 	margin-bottom: 0;

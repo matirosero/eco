@@ -25,6 +25,9 @@
 				'after'  => '</div>',
 			) );
 		?>
+		<?php
+		// echo do_shortcode('[mc4wp_form]'); 
+		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

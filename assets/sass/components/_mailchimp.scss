@@ -1,0 +1,25 @@
+.general-signup {
+	background: $green;
+	color: $white;
+	margin-bottom: 2rem;
+	padding: 1rem;
+}
+
+.mc4wp-form {
+	padding: 0;
+	input[type='text'], input[type='password'], input[type='email'] {
+		display: inline-block;
+		width: 47%;
+	}
+
+	#featured-hero &,
+	.general-signup & {
+
+		.newsletter-signup,
+		input[type="submit"], 
+		input[type="button"] {
+			margin-bottom: 0;
+		}
+		input[type="submit"], input[type="button"] {}
+	}
+}

@@ -5510,28 +5510,15 @@ label {
 .wpcf7-list-item {
   margin-right: 1rem; }
 
-/* line 45, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
-.mc4wp-form input[type='text'], .mc4wp-form input[type='password'], .mc4wp-form input[type='email'] {
-  display: inline-block;
-  width: 47%; }
-
-/* line 50, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
-#featured-hero .mc4wp-form {
-  padding-bottom: 0; }
-  /* line 53, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
-  #featured-hero .mc4wp-form .newsletter-signup,
-  #featured-hero .mc4wp-form input[type="submit"], #featured-hero .mc4wp-form input[type="button"] {
-    margin-bottom: 0; }
-
-/* line 61, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+/* line 46, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
 .comment-subscription-form {
   margin-bottom: 0; }
 
-/* line 66, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+/* line 51, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
 #edd_login_form .edd-lost-password {
   margin-bottom: 0; }
 
-/* line 69, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
+/* line 54, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/base/_forms.scss */
 #utility-bar .is-accordion-submenu #edd_login_form {
   padding-top: .5rem;
   padding-left: .5rem;
@@ -5845,6 +5832,29 @@ a.ofc-home {
   .accordion-title:hover {
     background-color: #F36E45;
     color: #fefefe; }
+
+/* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_mailchimp.scss */
+.general-signup {
+  background: #05AFA5;
+  color: #fefefe;
+  margin-bottom: 2rem;
+  padding: 1rem; }
+
+/* line 8, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_mailchimp.scss */
+.mc4wp-form {
+  padding: 0; }
+  /* line 10, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_mailchimp.scss */
+  .mc4wp-form input[type='text'], .mc4wp-form input[type='password'], .mc4wp-form input[type='email'] {
+    display: inline-block;
+    width: 47%; }
+  /* line 18, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_mailchimp.scss */
+  #featured-hero .mc4wp-form .newsletter-signup,
+  #featured-hero .mc4wp-form input[type="submit"],
+  #featured-hero .mc4wp-form input[type="button"],
+  .general-signup .mc4wp-form .newsletter-signup,
+  .general-signup .mc4wp-form input[type="submit"],
+  .general-signup .mc4wp-form input[type="button"] {
+    margin-bottom: 0; }
 
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_free-download-form.scss */
 .free-download {
