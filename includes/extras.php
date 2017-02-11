@@ -238,18 +238,39 @@ function eco_author_info_box( $content ) {
 		// Pass all this info to post content
 		$content = $content . '<footer class="author-bio" >' . $author_details . '</footer>';
 	}
-	$form = '<div class="general-signup">
-		<p>Ingresá tus datos y comenzá a crear tu propio negocio YA! Recibirás gratis nuestro E-Book PRIMEROS PASOS.</p>'
-		.do_shortcode('[mc4wp_form]')
-		.'</div>';
-
-	$content .= $form;
 
 	return $content;
 }
 
 // Add our function to the post content filter
 add_action( 'the_content', 'eco_author_info_box' );
+
+
+/**
+ * Add author to blog post
+ */
+function eco_subscribe_box( $content ) {
+
+	global $post;
+
+	// Detect if it is a singular post
+	if ( is_singular('post') ) {
+
+		$form = '<div class="general-signup">
+			<p>Ingresá tus datos y comenzá a crear tu propio negocio YA! Recibirás gratis nuestro E-Book PRIMEROS PASOS.</p>'
+			.do_shortcode('[mc4wp_form]')
+			.'</div>';
+
+		$content .= $form;
+
+	}
+
+	return $content;
+}
+
+// Add our function to the post content filter
+add_action( 'the_content', 'eco_subscribe_box' );
+
 
 // Allow HTML in author bio section
 remove_filter('pre_user_description', 'wp_filter_kses');
