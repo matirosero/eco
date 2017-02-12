@@ -194,7 +194,7 @@ function eco_author_info_box( $content ) {
 
 
 	// Detect if it is a single post with a post author
-	if ( is_single() && isset( $post->post_author ) ) {
+	if ( is_single() && isset( $post->post_author ) && is_singular('post') ) {
 
 		// Get author's display name
 		$display_name = get_the_author_meta( 'display_name', $post->post_author );
