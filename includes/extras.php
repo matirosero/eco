@@ -274,3 +274,15 @@ add_action( 'the_content', 'eco_subscribe_box' );
 
 // Allow HTML in author bio section
 remove_filter('pre_user_description', 'wp_filter_kses');
+
+
+function winwar_no_related_posts( $options ) {
+    if ( !is_singular( 'post' ) ) {
+        $options['enabled'] = false;
+    }
+    return $options;
+}
+add_filter( 'jetpack_relatedposts_filter_options', 'winwar_no_related_posts' );
+
+
+// https://jeremy.hu/jetpack-missing-images-related-posts/
