@@ -274,3 +274,11 @@ add_action( 'the_content', 'eco_subscribe_box' );
 
 // Allow HTML in author bio section
 remove_filter('pre_user_description', 'wp_filter_kses');
+
+
+//No CTs to Jetpack
+function allow_my_post_types($allowed_post_types) {
+    $allowed_post_types[] = '';
+    return $allowed_post_types;
+}
+add_filter( 'rest_api_allowed_post_types', 'allow_my_post_types' );
