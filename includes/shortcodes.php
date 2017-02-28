@@ -1,17 +1,28 @@
 <?php
 
-// Enable shortcodes in text widgets
+/**
+ * Enable shortcodes in text widgets
+ */
 add_filter('widget_text','do_shortcode');
 
-//Register shortcodes
+
+/**
+ * Register all shortcodes
+ *
+ * @return null
+ */
 function register_shortcodes(){
    add_shortcode('recent-posts', 'recent_posts_function');
    add_shortcode('free-download', 'free_download_function');
+   add_shortcode('testimonials', 'testimonials_shortcode');
 }
 add_action( 'init', 'register_shortcodes');
 
 
-//Recent posts
+/**
+ * Recent posts callback
+ *
+ */
 function recent_posts_function($atts) {
 
    extract(shortcode_atts(array(
@@ -32,6 +43,11 @@ function recent_posts_function($atts) {
    return $return_string;
 }
 
+
+/**
+ * Alter mailchimp form so it mentions free download
+ *
+ */
 function mailchimp_form_for_download($equalizer=false) {
    	$form = do_shortcode('[mc4wp_form id="44"]');
    	$form = str_replace('Inscribite', 'Recibí guía gratuita', $form);
@@ -52,7 +68,10 @@ function mailchimp_form_for_download($equalizer=false) {
 	return $mailchimp;
 }
 
-//Free download with signup
+/**
+ * Free download with mailchimp signup callback
+ *
+ */
 function free_download_function($atts) {
 
    	extract(shortcode_atts(array(
@@ -108,3 +127,56 @@ function free_download_function($atts) {
 }
 
 
+/**
+ * Testimonials callback
+ *
+ */
+function testimonials_shortcode() {
+    global $wp_query,
+    	$post;
+
+	$args = array(
+
+		//Type & Status Parameters
+		'post_type'   => 'testimonial',
+		'post_status' => 'publish',
+
+		//Order & Orderby Parameters
+		'order'               => 'DESC',
+		'orderby'             => 'date',
+
+		//Pagination Parameters
+		'posts_per_page'         => -1,
+
+		//Permission Parameters -
+		'perm' => 'readable',
+
+		//Parameters relating to caching
+		'no_found_rows'          => false,
+		'cache_results'          => true,
+		'update_post_term_cache' => true,
+		'update_post_meta_cache' => true,
+
+	);
+
+	$query = new WP_Query( $args );
+
+	if ( $query->have_posts() ) : ?>
+
+		<div class="row medium-up-2">
+
+		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+
+			<article class="column column-block">
+				<?php the_content(); ?>
+				<?php the_title(); ?>
+			</article>
+
+		<?php endwhile; ?>
+
+		</div>
+
+	<?php endif;
+
+    wp_reset_postdata();
+}
