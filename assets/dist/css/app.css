@@ -5724,6 +5724,103 @@ a.ofc-home {
         left: 12%;
         width: 32%; } }
 
+/* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+.testimonial {
+  margin: 1rem 0; }
+
+/* line 5, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+.testimonial-quote {
+  background-color: #e6e6e6;
+  margin: 0 10px;
+  padding: 0.75rem 1rem;
+  position: relative;
+  border: none; }
+  /* line 12, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+  .testimonial-quote:before {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 15px;
+    border-width: 0 30px 25px 0;
+    border-style: solid;
+    border-color: transparent #e6e6e6; }
+  /* line 21, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+  .testimonial-quote:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 37px;
+    border-width: 0 8px 25px 0;
+    border-style: solid;
+    border-color: transparent #fefefe; }
+  /* line 30, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+  .testimonial-quote p {
+    color: inherit; }
+    /* line 32, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+    .testimonial-quote p:last-child {
+      margin-bottom: 0; }
+
+/* line 37, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+.testimonial-source {
+  position: relative;
+  margin: 0.5rem 10px 0 60px; }
+
+/* line 41, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+.testimonial-name {
+  font-size: 1rem;
+  margin: 0; }
+  /* line 44, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+  .testimonial-photo + .testimonial-name {
+    margin-left: 56px; }
+
+/* line 48, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+.testimonial-position {
+  display: block;
+  font-size: 0.75rem; }
+  /* line 51, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+  .testimonial-photo + .testimonial-name + .testimonial-position {
+    margin-left: 56px; }
+
+/* line 55, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+.testimonial-photo {
+  float: left;
+  background-color: #05AFA5;
+  border: 5px solid #05AFA5;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden; }
+
+@media screen and (min-width: 40em) {
+  /* line 66, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+  .testimonial-quote {
+    margin: 0;
+    padding: 2rem; }
+    /* line 69, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+    .testimonial-quote:before {
+      bottom: -40px;
+      left: 40px;
+      border-width: 0 50px 40px 0; }
+    /* line 74, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+    .testimonial-quote:after {
+      bottom: -40px;
+      left: 78px;
+      border-width: 0 12px 40px 0; }
+  /* line 80, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+  .testimonial-source {
+    margin: 0.75rem 0 0 104px; }
+  /* line 83, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+  .testimonial-photo {
+    height: 80px;
+    width: 80px; }
+    /* line 86, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+    .testimonial-photo + .testimonial-name {
+      padding-top: 0.25rem; }
+    /* line 89, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_testimonials.scss */
+    .testimonial-photo + .testimonial-name,
+    .testimonial-photo + .testimonial-name + .testimonial-position {
+      margin-left: 94px; } }
+
 /* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/_shop.scss */
 .shop-list {
   list-style: none;

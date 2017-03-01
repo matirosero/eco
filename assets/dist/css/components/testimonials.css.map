@@ -1,0 +1,1 @@
+{"version":3,"sources":["testimonials.css"],"names":[],"mappings":"AAAA,qGAAqG;AACrG;EACE,UAAU,EAAE","file":"components/testimonials.css","sourcesContent":["/* line 1, /Users/Mati/Sites/soyeco/wp-content/themes/eco/assets/sass/components/testimonials.scss */\n.testimonial {\n  margin: 0; }\n"],"sourceRoot":"/source/"}

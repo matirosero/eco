@@ -61,6 +61,7 @@ get_header(); ?>
 		</div><!-- .row .home-section -->
 
 		<div class="row home-section">
+			<h2>Testimonios</h2>
 			<?php echo do_shortcode( '[testimonials]' ); ?>
 		</div><!-- .row .home-section -->
 			

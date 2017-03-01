@@ -167,10 +167,20 @@ function testimonials_shortcode() {
 
 		<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
-			<article class="column column-block">
-				<?php the_content(); ?>
-				<?php the_title(); ?>
-			</article>
+			<figure <?php post_class("column column-block"); ?>>
+				<blockquote class="testimonial-quote">
+					<?php the_content(); ?>
+				</blockquote>
+				<figcaption class="testimonial-source">
+					<?php if ( has_post_thumbnail() ) : ?>
+						<div class="testimonial-photo">
+							<?php the_post_thumbnail('thumbnail'); ?>
+						</div>
+					<?php endif; ?>
+					<h3 class="testimonial-name"><?php the_title(); ?></h3>
+					<span class="testimonial-position"><?php the_field( 'testimonial_position' ); ?></span>
+				</figcaption>
+			</figure>
 
 		<?php endwhile; ?>
 

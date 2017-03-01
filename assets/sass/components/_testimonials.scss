@@ -1,0 +1,94 @@
+.testimonial {
+	margin: 1rem 0;
+}
+
+.testimonial-quote {
+	background-color: $light-gray;
+	// color: $white;
+	margin: 0 map-get($grid-column-gutter, small) / 2;
+	padding: 0.75rem 1rem;
+	position: relative;
+	border: none;
+	&:before {
+		content: "";
+	    position: absolute;
+	    bottom: -25px;
+	    left: 15px;
+	    border-width: 0 30px 25px 0;
+	    border-style: solid;
+	    border-color: transparent $light-gray;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -25px;
+		left: 37px;
+		border-width: 0 8px 25px 0;
+		border-style: solid;
+		border-color: transparent $white;
+	}
+	p {
+		color: inherit;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+.testimonial-source {
+	position: relative;
+	margin: 0.5rem (map-get($grid-column-gutter, small) / 2) 0 60px;
+}
+.testimonial-name {
+	font-size: 1rem;
+	margin: 0;
+	.testimonial-photo + & {
+		margin-left: 56px;
+	}
+}
+.testimonial-position {
+	display: block;
+	font-size: 0.75rem;
+	.testimonial-photo + .testimonial-name + & {
+		margin-left: 56px;
+	}
+}
+.testimonial-photo {
+	float: left;
+	background-color: $green;
+	border: 5px solid $green;
+	height: 50px;
+	width: 50px;
+	@include rounded;
+	overflow: hidden;
+}
+
+@include breakpoint(medium) {
+	.testimonial-quote {
+		margin: 0;
+		padding: 2rem;
+		&:before {
+		    bottom: -40px;
+		    left: 40px;
+		    border-width: 0 50px 40px 0;
+		}
+		&:after {
+			bottom: -40px;
+			left: 78px;
+			border-width: 0 12px 40px 0;
+		}
+	}
+	.testimonial-source {
+		margin: 0.75rem 0 0 104px;
+	}
+	.testimonial-photo {
+		height: 80px;
+		width: 80px;
+		& + .testimonial-name {
+			padding-top: 0.25rem;
+		}
+		& + .testimonial-name,
+		& + .testimonial-name + .testimonial-position {
+			margin-left: 94px;
+		}
+	}
+}
