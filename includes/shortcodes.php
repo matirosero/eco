@@ -53,7 +53,7 @@ function mailchimp_form_for_download($equalizer=false) {
    	$form = str_replace('Inscribite', 'Recibí guía gratuita', $form);
 
    	if ($equalizer) :
-   		$equalize = ' data-equalizer-watch';
+   		$equalize = ' data-equalizer-watch data-equalize-on="medium"';
    	endif;
 
 	$mailchimp = '<div class="free-download-form"'.$equalize.'>
