@@ -20,13 +20,11 @@ $download_id = get_the_ID(); // download ID
 		</header><!-- .entry-header -->
 	<?php endif; ?>
 
+	<?php if( !edd_has_user_purchased($user_ID, $download_id) && !current_user_can('administrator') ): ?>
 
+		<section id="product-public" class="page-section">
 
-
-	<section id="product-public" class="page-section">
-		<?php the_field('downloads_public'); ?>
-
-
+			<?php the_field('downloads_public'); ?>
 
 
 				<?php
@@ -63,8 +61,8 @@ $download_id = get_the_ID(); // download ID
 
 
 
-	</section><!-- #product-public -->
-
+		</section><!-- #product-public -->
+	<?php endif; ?>
 	<?php if( edd_has_user_purchased($user_ID, $download_id) || current_user_can('administrator') ): ?>
 		<section id="product-private" class="page-section">
 			<?php the_field('downloads_private'); ?>

@@ -33,11 +33,6 @@ endif; ?>
 				<p class="product-intro"><?php the_field('downloads_intro'); ?></p>
 			</div><!--end .product-header-info-->
 
-
-
-
-
-
 		</div>
 	</div>
 </header><!-- #product-header -->
