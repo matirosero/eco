@@ -39,15 +39,21 @@ $download_id = get_the_ID(); // download ID
 							echo '<div class="buy-box-price small-6 columns">';
 							echo '<p class="buy-box-title">Precio</p>';
 							edd_get_template_part( 'shortcode', 'content-price' );
-							echo '</div>';
-
-							echo '<div class="buy-box-button small-6 columns">';
 
 							if ( get_field('downloads_dicount_price') ):
 
 								echo '<span class="discount-price">';
 								the_field('downloads_dicount_price');
 								echo '</span>';
+								//echo '<p class="buy-box-notes">'.get_field('downloads_buybox_text').'</p>';
+							endif;
+							echo '</div>';
+
+							echo '<div class="buy-box-button small-6 columns">';
+
+							if ( get_field('downloads_dicount_price') ):
+
+
 								echo '<p class="buy-box-notes">'.get_field('downloads_buybox_text').'</p>';
 							endif;
 
